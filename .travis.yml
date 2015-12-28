@@ -9,7 +9,7 @@ before_install:
 - echo "Host github.com" >> ~/.ssh/config
 - echo "  IdentityFile ~/.ssh/publish-key" >> ~/.ssh/config
 - git remote set-url origin git@github.com:riquellopes/riquellopes.github.io.git
-- git fetch origin -f gh-pages:gh-pages
+- git fetch origin -f master:master
 install:
 - pip install --upgrade pip
 - pip install -r requirements.txt

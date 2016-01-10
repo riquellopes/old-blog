@@ -5,7 +5,8 @@ from __future__ import unicode_literals
 AUTHOR = u'Henrique Lopes'
 SITENAME = u'Henrique Lopes'
 SITEURL = ''
-GITHUB_URL = "http://github.com/riquellopes"
+GITHUB_URL = 'http://github.com/riquellopes'
+DISQUS_SITENAME = 'riquellopes'
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'

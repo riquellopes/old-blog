@@ -1,10 +1,9 @@
-Início de tudo
-====================================
-:author: Henrique Lopes
-:date: 2015-12-28 10:58
-:tags: usados, empreendedorismo, musica
-:category: Outros
-
+Title: Início de tudo
+Date: 2015-12-28 10:58
+Tags: usados, empreendedorismo, musica
+Category: Outros
+Slug: inicio-de-tudo
+Author: Henrique Lopes
 
 Efim decidi começar a escrever, compartilhar experiências e pensamentos.
 Esse espaço não será destinado apenas para tecnologia, existem outras coisas que eu gosto de fazer,

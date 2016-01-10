@@ -1,10 +1,9 @@
-A vida e a roda gigante
-====================================
-:author: Henrique Lopes
-:date: 2016-01-10 15:43
-:tags: empreendedorismo
-:category: Vida
-
+Title: A vida e a roda gigante
+Date: 2016-01-10 15:43
+Tags: empreendedorismo
+Category: Vida
+Slug: a-vida-e-a-roda-gigante
+Author: Henrique Lopes
 
  Hoje conversei por alguns minutos com um amigo sobre empreendedorismo, atitudes que tomamos ou deixamos de tomar que influenciam na nossa vida. Depois encerramos o assunto, esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.
 

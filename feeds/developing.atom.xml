@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Henrique Lopes</title><link href="http://riquellopes.github.io/" rel="alternate"></link><link href="http://riquellopes.github.io/feeds/developing.atom.xml" rel="self"></link><id>http://riquellopes.github.io/</id><updated>2016-01-11T21:57:00-02:00</updated><entry><title>Simples Flask App</title><link href="http://riquellopes.github.io/simples-flask-app.html" rel="alternate"></link><updated>2016-01-11T21:57:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-11:simples-flask-app.html</id><summary type="html">&lt;p&gt;Já sentiu vontade de criar uma simples aplicação web, mas se sentiu preso? Pois quando você via o número de
+configurações que eram necessárias para fazer a sua aplicação apenas dar um Hello World, você já sentia que ia
+demorar? Pois bem, o Python não é uma bala de prata, mas ele possui n &lt;a href="https://pt.wikipedia.org/wiki/Framework"&gt;frameworks&lt;/a&gt; e &lt;a href="https://en.wikipedia.org/wiki/Microframework"&gt;microframeworks&lt;/a&gt; que vão fazer você sentir prazer em gerar um simples Hello World.&lt;/p&gt;
+&lt;p&gt;Hoje eu quero apresentar um microframework muito conhecido e já difundido na comunidade Python, o &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt; que pela sua simplicidade e robustez, merece ser o meu primeiro post hands on.
+E, para adicionar mais baterias ao nosso App, vamos falar um pouco de &lt;a href="https://virtualenv.readthedocs.org/en/latest/"&gt;virtualenv&lt;/a&gt;.&lt;/p&gt;
+&lt;h5&gt;Primeiro Passo - Montar o ambiente:&lt;/h5&gt;
+&lt;p&gt;Se você usa &lt;a href="https://pt.wikipedia.org/wiki/Linux"&gt;Linux&lt;/a&gt; ou &lt;a href="https://pt.wikipedia.org/wiki/OS_X"&gt;Macosx&lt;/a&gt; seguir esse post será muito tranquilo. Se você usa &lt;a href="https://pt.wikipedia.org/wiki/Microsoft_Windows"&gt;Windows&lt;/a&gt;, eu vou escrever um outro post só para ajudar você.&lt;/p&gt;
+&lt;p&gt;Abra o terminal e siga os passos abaixo:&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;pip install virtualenv
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Porque não instalar logo o Flask, e partir para o que realmente interessa? Se você teve a curiosidade de abrir o link do &lt;a href="https://virtualenv.readthedocs.org/en/latest/"&gt;virtualenv&lt;/a&gt; e dar uma lida, você já sabe o porque e para que eu iniciei esse app instalando essa lib. O que eu quero fixar na sua mente de uma forma bem simples, é que no mundo real em uma empresa web ou de qualquer ramo da tecnologia, você vai ter a necessidade de trabalhar com várias versões de Python no seu dia a dia. Cada app ou projeto que você for trabalhar, vão possuir características que irão exigir que você possua várias versões de Python na sua máquina. O &lt;a href="https://virtualenv.readthedocs.org/en/latest/"&gt;virturalenv&lt;/a&gt; vai permitir que você possua, para cada projeto, uma versão de Python diferente, sem precisar instalar nada no Python nativo do seu sistema. E sem deixar passar despercebido, eu estou usando o gerenciador de pacote do Python o &lt;a href="https://docs.python.org/3.6/installing/index.html"&gt;pip&lt;/a&gt;, com ele você irá instalar todos pacotes de python que o seu app precisa.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;virtualenv /tmp/hello_world
+&lt;span class="nb"&gt;source&lt;/span&gt; /tmp/hello_world/bin/activate
+
+pip install flask
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Eu não vou entrar no mérito dos comandos executados com o virtualenv, até porque a documentação explica muito bem isso. Mas logo logo eu escrevo um post, para te deixar a par.&lt;/p&gt;
+&lt;h4&gt;Segundo passo - Escrever o app:&lt;/h4&gt;
+&lt;p&gt;Após criar o nosso ambiente, vamos criar o nosso app. Geralmente eu crio uma pasta, então se quiser, pode fazer o mesmo. Comando executados &lt;a href="http://www.linfo.org/mkdir.html"&gt;mkdir&lt;/a&gt;, &lt;a href="http://www.linfo.org/cd.html"&gt;cd&lt;/a&gt;, &lt;a href="http://www.linfo.org/touch.html"&gt;touch&lt;/a&gt; são comandos bem comuns para quem já do mundo opensource. Você pode clicar em cada uma deles para obter uma descrição melhor. O último comando executando o "atom" pode ser novidade para você, mais ele é um alias para o editor &lt;a href="https://atom.io/"&gt;Atom&lt;/a&gt;. Fique à vontade para usar o editor da sua preferência.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;mkdir hello-world
+&lt;span class="nb"&gt;cd &lt;/span&gt;hello-world
+touch app.py
+atom app.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Quando eu escrevi essas linhas de código pela primeira vez, eu fiquei impressionado com a simplicidade que era para escrever uma aplicação. Cada linguagem tem o seu paradigma, mas o Python me surpreende com a sua simplicidade. Com apenas as 9 linhas de código abaixo a sua aplicação está pronta para ser executada.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;flask&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;
+
+&lt;span class="n"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Flask&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__name__&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nd"&gt;@app.route&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;home&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;HelloWorld&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;app&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;div class="codehilite"&gt;&lt;pre&gt;python app.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Terceiro passo:&lt;/h4&gt;
+&lt;p&gt;Esse é o passo mais importante. Não pare de aprender e compartilhar.&lt;/p&gt;</summary><category term="python"></category><category term="flask"></category><category term="dev"></category></entry></feed>

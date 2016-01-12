@@ -18,6 +18,7 @@
         <header id="banner" class="body">
                 <h1><a href="http://riquellopes.github.io/">Henrique Lopes </a></h1>
                 <nav><ul>
+                    <li><a href="http://riquellopes.github.io/category/developing.html">developing</a></li>
                     <li><a href="http://riquellopes.github.io/category/outros.html">Outros</a></li>
                     <li><a href="http://riquellopes.github.io/category/vida.html">Vida</a></li>
                 </ul></nav>
@@ -25,7 +26,80 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html">A vida e a roda gigante</a></h1>
+                    <h1 class="entry-title"><a href="http://riquellopes.github.io/simples-flask-app.html">Simples Flask App</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-01-11T21:57:00-02:00">
+                Published: Mon 11 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://riquellopes.github.io/author/henrique-lopes.html">Henrique Lopes</a>
+        </address>
+<p>In <a href="http://riquellopes.github.io/category/developing.html">developing</a>.</p>
+<p>tags: <a href="http://riquellopes.github.io/tag/python.html">python</a> <a href="http://riquellopes.github.io/tag/flask.html">flask</a> <a href="http://riquellopes.github.io/tag/dev.html">dev</a> </p>
+</footer><!-- /.post-info --><p>Já sentiu vontade de criar uma simples aplicação web, mas se sentiu preso? Pois quando você via o número de
+configurações que eram necessárias para fazer a sua aplicação apenas dar um Hello World, você já sentia que ia
+demorar? Pois bem, o Python não é uma bala de prata, mas ele possui n <a href="https://pt.wikipedia.org/wiki/Framework">frameworks</a> e <a href="https://en.wikipedia.org/wiki/Microframework">microframeworks</a> que vão fazer você sentir prazer em gerar um simples Hello World.</p>
+<p>Hoje eu quero apresentar um microframework muito conhecido e já difundido na comunidade Python, o <a href="http://flask.pocoo.org/">Flask</a> que pela sua simplicidade e robustez, merece ser o meu primeiro post hands on.
+E, para adicionar mais baterias ao nosso App, vamos falar um pouco de <a href="https://virtualenv.readthedocs.org/en/latest/">virtualenv</a>.</p>
+<h5>Primeiro Passo - Montar o ambiente:</h5>
+<p>Se você usa <a href="https://pt.wikipedia.org/wiki/Linux">Linux</a> ou <a href="https://pt.wikipedia.org/wiki/OS_X">Macosx</a> seguir esse post será muito tranquilo. Se você usa <a href="https://pt.wikipedia.org/wiki/Microsoft_Windows">Windows</a>, eu vou escrever um outro post só para ajudar você.</p>
+<p>Abra o terminal e siga os passos abaixo:</p>
+<div class="codehilite"><pre>pip install virtualenv
+</pre></div>
+
+
+<p>Porque não instalar logo o Flask, e partir para o que realmente interessa? Se você teve a curiosidade de abrir o link do <a href="https://virtualenv.readthedocs.org/en/latest/">virtualenv</a> e dar uma lida, você já sabe o porque e para que eu iniciei esse app instalando essa lib. O que eu quero fixar na sua mente de uma forma bem simples, é que no mundo real em uma empresa web ou de qualquer ramo da tecnologia, você vai ter a necessidade de trabalhar com várias versões de Python no seu dia a dia. Cada app ou projeto que você for trabalhar, vão possuir características que irão exigir que você possua várias versões de Python na sua máquina. O <a href="https://virtualenv.readthedocs.org/en/latest/">virturalenv</a> vai permitir que você possua, para cada projeto, uma versão de Python diferente, sem precisar instalar nada no Python nativo do seu sistema. E sem deixar passar despercebido, eu estou usando o gerenciador de pacote do Python o <a href="https://docs.python.org/3.6/installing/index.html">pip</a>, com ele você irá instalar todos pacotes de python que o seu app precisa.</p>
+<div class="codehilite"><pre>virtualenv /tmp/hello_world
+<span class="nb">source</span> /tmp/hello_world/bin/activate
+
+pip install flask
+</pre></div>
+
+
+<p>Eu não vou entrar no mérito dos comandos executados com o virtualenv, até porque a documentação explica muito bem isso. Mas logo logo eu escrevo um post, para te deixar a par.</p>
+<h4>Segundo passo - Escrever o app:</h4>
+<p>Após criar o nosso ambiente, vamos criar o nosso app. Geralmente eu crio uma pasta, então se quiser, pode fazer o mesmo. Comando executados <a href="http://www.linfo.org/mkdir.html">mkdir</a>, <a href="http://www.linfo.org/cd.html">cd</a>, <a href="http://www.linfo.org/touch.html">touch</a> são comandos bem comuns para quem já do mundo opensource. Você pode clicar em cada uma deles para obter uma descrição melhor. O último comando executando o "atom" pode ser novidade para você, mais ele é um alias para o editor <a href="https://atom.io/">Atom</a>. Fique à vontade para usar o editor da sua preferência.</p>
+<div class="codehilite"><pre>mkdir hello-world
+<span class="nb">cd </span>hello-world
+touch app.py
+atom app.py
+</pre></div>
+
+
+<p>Quando eu escrevi essas linhas de código pela primeira vez, eu fiquei impressionado com a simplicidade que era para escrever uma aplicação. Cada linguagem tem o seu paradigma, mas o Python me surpreende com a sua simplicidade. Com apenas as 9 linhas de código abaixo a sua aplicação está pronta para ser executada.</p>
+<div class="codehilite"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
+    <span class="k">return</span> <span class="s">&quot;HelloWorld&quot;</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+
+
+<div class="codehilite"><pre>python app.py
+</pre></div>
+
+
+<h4>Terceiro passo:</h4>
+<p>Esse é o passo mais importante. Não pare de aprender e compartilhar.</p><p>There are <a href="http://riquellopes.github.io/simples-flask-app.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html" rel="bookmark"
+                           title="Permalink to A vida e a roda gigante">A vida e a roda gigante</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-01-10T15:43:00-02:00">
                 Published: Sun 10 January 2016
@@ -36,17 +110,11 @@
         </address>
 <p>In <a href="http://riquellopes.github.io/category/vida.html">Vida</a>.</p>
 <p>tags: <a href="http://riquellopes.github.io/tag/empreendedorismo.html">empreendedorismo</a> </p>
-</footer><!-- /.post-info --><p>Hoje conversei por alguns minutos com um amigo sobre empreendedorismo e atitudes que tomamos ou deixamos de tomar, que influenciam a nossa vida. Depois encerramos o assunto e esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.</p>
-<p>A maioria de nós queremos ser vencedores, queremos de alguma forma obter sucesso, alguns da forma errada e outras da forma correta. Alguns, para isso, vão fazer concurso público, outros vão fazer faculdade, outros vão abrir empresas e alguns vão apenas aguardar. Mas todas elas vão tomar decisões.</p>
-<h5>E o que a roda gigante tem a ver com minha vida?</h5>
-<p>Para e pensa, uma <a href="https://pt.wikipedia.org/wiki/Roda-gigante">roda gigante</a> é um circulo na qual você está sentado em uma cadeirinha enquanto ela gira. E pensa agora como é maneiro você chegar lá no topo e ver toda aquela vista, e como é chato ou frustante quando ela desce para dar outra volta. Essa é finalidade dela: dar voltas. Mas e se fosse possivel parar lá em cima por alguns minutos, para que você pudesse aproveitar a vista? Acho que se você tivesse o controle da roda gigante, você faria isso. A vida é da mesma forma, ela é apenas um estado, nós apenas passamos por ele. Trazendo um pouco para o momento que Brasil ou e outros países passam, existe demisão em massa, pessoas que possuiam empregos excelentes, com salários maravilhosos, agora são apenas ex-empregados. E se essas pessoas, ao invés de ficar apenas esbanjando tudo que estavam ganhando, tivessem aplicado em conhecimento? Acho eu na minha humilde ignorância, que eles estariam bem melhores hoje, mesmo que sem emprego. Pois eles teriam o conhecimento na mão. A roda gigante dessas pessoas agora está embaixo, onde a vista não é linda para se apreciar.</p>
-<h5>Como controlar a roda gigante?</h5>
-<p>Então, se tudo é apenas um estado, até a volta da roda gigante, como eu faço para obter o controle dessa roda? Bom eu tenho uma notícia triste, controlar a roda é muito difícil, assim como a vida. Mas o que eu posso perceber nessa minha curta vida é, só os bons conseguem fazer a roda parar por mais tempo, na parte de cima, onde a vista é mais bonita. Nesse modelo de vida na qual eu uso a roda gigante como comparativo, o que deve ser feito e tentar passar o máximo de tempo na parte superior da roda, pois é nela que está o sucesso. E nesse momento em que o sucesso está nas suas mãos, você não deve desperdiçar, pois ele é único. Conheça pessoas, faça <a href="https://pt.wikipedia.org/wiki/Networking">networking</a>, vá a eventos e fale com pessoas. Nesse momento o sucesso está com você, todos vão querer estar ao seu lado. Isso vai ajudar você a controlar a sua roda gigante, a te deixar um tempo a mais na vista mas linda.</p><p>There are <a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>Hoje conversei por alguns minutos com um amigo sobre empreendedorismo e atitudes que tomamos ou deixamos de tomar, que influenciam a nossa vida. Depois encerramos o assunto e esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.</p>
+<p>A ...</p>
+                <a class="readmore" href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html">read more</a>
+<p>There are <a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>

@@ -34,4 +34,5 @@ DEFAULT_PAGINATION = 3
 # RELATIVE_URLS = True
 
 MD_EXTENSIONS = (['codehilite', 'extra'])
-EXTRA_PATH_METADATA = {'CNAME': {'path': 'CNAME'}, }
+STATIC_PATHS = ['extra/CNAME', ]
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }

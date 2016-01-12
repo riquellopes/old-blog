@@ -35,7 +35,7 @@ Eu não vou entrar no mérito dos comandos executados com o virtualenv, até por
 
 #### Segundo passo - Escrever o app:
 
-Após criar o nosso ambiente, vamos criar o nosso app. Geralmente eu crio uma pasta, então se quiser fa
+Após criar o nosso ambiente, vamos criar o nosso app. Geralmente eu crio uma pasta, então se quiser, pode fazer o mesmo. Comando executados [mkdir](http://www.linfo.org/mkdir.html), [cd](http://www.linfo.org/cd.html), [touch](http://www.linfo.org/touch.html) são comandos bem comuns para quem já do mundo opensource. Você pode clicar em cada uma deles para obter uma descrição melhor. O último comando executando o "atom" pode ser novidade para você, mais ele é um alias para o editor [Atom](https://atom.io/). Fique à vontade para usar o editor da sua preferência.
 
 ```bash
 mkdir hello-world
@@ -43,6 +43,8 @@ cd hello-world
 touch app.py
 atom app.py
 ```
+
+Quando eu escrevi essas linhas de código pela primeira vez, eu fiquei impressionado com a simplicidade que era para escrever uma aplicação. Cada linguagem tem o seu paradigma, mais python me surpreende com a sua simplicidade. Com apenas as 9 linhas de código abaixo a sua aplicação esta pronta para ser executada.
 
 ```python
 from flask import Flask
@@ -61,3 +63,6 @@ if __name__ == "__main__":
 ```bash
 python app.py
 ```
+
+#### Terceiro passo:
+Esse é o passo mais importante. Não pare te aprender e compartilhar.

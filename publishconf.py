@@ -21,4 +21,5 @@ DELETE_OUTPUT_DIRECTORY = True
 # Following items are often useful when publishing
 
 DISQUS_SITENAME = 'riquellopes'
+DISQUS_NO_ID = True
 GOOGLE_ANALYTICS = "UA-72238128-1"

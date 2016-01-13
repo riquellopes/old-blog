@@ -26,7 +26,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 
 # Social widget
 SOCIAL = (('github', 'http://github.com/riquellopes'),
-          ('linkedIn', 'https://www.linkedin.com/in/riquellopes'),)
+          ('linkedIn', 'https://www.linkedin.com/in/riquellopes'),
+          ('delicious', 'https://delicious.com/riquellopes'),)
 
 DEFAULT_PAGINATION = 3
 

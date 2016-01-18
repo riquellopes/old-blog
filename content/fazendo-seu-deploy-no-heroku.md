@@ -31,7 +31,7 @@ bootflask -p hello-heroku
 
 Mais ainda faltam alguns arquivos, um deles é o requirements.txt, esse arquivo é utilizado pelo [Heroku](https://www.heroku.com/) para indentificar quais pacotes do seu projeto Python,
 precisam ser instalados. O [freeze](https://pip.pypa.io/en/stable/reference/pip_freeze/#id4) é o comando do gerenciador de pacotes pip, para recuperar todos os pacotes que seu environment possui, quando você executar o comando pip freeze > requirements.txt, ele vai pegar todo o output
-e escrever no arquivo requirements.txt. Após criar o requirements.txt abra o arquivo, no editor de sua preferência, e remova o BootFlask==0.1 no arquivo, você não vai precisar dele no [Heroku](https://www.heroku.com/).
+e escrever no arquivo requirements.txt. Após criar o requirements.txt abra o arquivo, no editor de sua preferência, e remova o BootFlask==0.1 do arquivo, você não vai precisar dele no [Heroku](https://www.heroku.com/).
 
 
 ```bash

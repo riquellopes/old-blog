@@ -84,5 +84,6 @@ git push
 
 E num passe de mágica a sua aplicação esta me produção. Acho que não poderia ter um jeito mais fácil de fazer isso. Como eu sempre preso pelo show me the code, ai estão os meus:
 
-[Projeto em produção](http://mighty-stream-1291.herokuapp.com)
-[Código do projeto](https://github.com/riquellopes/hello-heroku)
+
+* [Projeto em produção](http://mighty-stream-1291.herokuapp.com)
+* [Código do projeto](https://github.com/riquellopes/hello-heroku)

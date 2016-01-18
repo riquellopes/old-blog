@@ -51,16 +51,16 @@ git commit -am "iniciando app."
 #### Segundo passo - Criando a sua aplicação na interface do Heroku
 A interface no Heroku é muito intuitiva e você não vai encontrar grandes problemas para criar um novo projeto.
 Após sua autenticação no Heroku, basta você clicar em create app,
-![alt text](http://blog.henriquelopes.com.br/imagens/create-new-app.png "Create new App")
+![Create new app](//res.cloudinary.com/madeinhouse/image/upload/c_scale,w_780/v1453126089/create-new-app_mqevjw.png "Create new App")
 
 
 Após você clicar em create app, você será encaminhado para a tela abaixo. o campo App Name não é obrigatório,
 mas se você quiser dar um nome legal para a sua aplicação fique a vontade.
-![alt text](http://blog.henriquelopes.com.br/imagens/create-app.png "Create App")
+![Create app](http://blog.henriquelopes.com.br/imagens/create-app.png "Create App")
 
 
 Depois dessa difícil tarefa, você será levado para a ultima tela, onde você receberá algumas instruções que você deve executar na sua máquina. Se você não possui o [Heroku ToolBelt](https://toolbelt.heroku.com/), esse é um bom momento para instalar.
-![alt text](http://blog.henriquelopes.com.br/imagens/deploy-your-changes.png "Deploy you changes")
+![Deploy you changes](http://blog.henriquelopes.com.br/imagens/deploy-your-changes.png "Deploy you changes")
 
 
 #### Terceiro passo - Configurando variáveis locais e fazendo seu primeiro deploy:

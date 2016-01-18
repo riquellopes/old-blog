@@ -7,7 +7,7 @@ Author: Henrique Lopes
 
 Semana passada eu mostrei como era simples pra que você pode-se criar o seu primeiro app web com Python,
 [simples flask app](http://blog.henriquelopes.com.br/simples-flask-app.html). Hoje eu quero ir mas além,
-você já deve ter visto alguns post em inglês ou em português de como fazer o seu deploy no [Heroku](https://www.heroku.com/) é simples. Como o Flask é o meu coringa pra quando preciso desenvolver algo simples, o [Heroku](https://www.heroku.com/) é o meu parque de diversões. Onde eu posso simplesmente com um git push,
+você já deve ter visto alguns post em inglês ou em português, de como fazer o seu primeiro deploy no [Heroku](https://www.heroku.com/) é simples. Como o Flask é o meu coringa pra quando preciso desenvolver algo simples, o [Heroku](https://www.heroku.com/) é o meu parque de diversões. Onde eu posso simplesmente com um git push,
 colocar minha aplicação em produção. E de tando fazer isso, eu resolvi criar uma extensão para o [Flask](http://flask.pocoo.org/), o [BootFlask](https://github.com/riquellopes/boot-flask), com ele você cria uma
 aplicação simples, e ganha algum tempo para fazer o que realmente importa. Mais vamos ao que interessa.
 

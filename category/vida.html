@@ -26,7 +26,92 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html">A vida e a roda gigante</a></h1>
+                    <h1 class="entry-title"><a href="http://riquellopes.github.io/fazendo-seu-deploy-no-heroku.html">Fazendo seu deploy do Heroku</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-01-17T17:48:00-02:00">
+                Published: Sun 17 January 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://riquellopes.github.io/author/henrique-lopes.html">Henrique Lopes</a>
+        </address>
+<p>In <a href="http://riquellopes.github.io/category/vida.html">Vida</a>.</p>
+<p>tags: <a href="http://riquellopes.github.io/tag/flask.html">flask</a> <a href="http://riquellopes.github.io/tag/python.html">python</a> <a href="http://riquellopes.github.io/tag/heroku.html">heroku</a> <a href="http://riquellopes.github.io/tag/deploy.html">deploy</a> </p>
+</footer><!-- /.post-info --><p>Semana passada eu mostrei como era simples você criar o seu primeiro app web com Python,
+<a href="http://blog.henriquelopes.com.br/simples-flask-app.html">simples flask app</a>. Hoje eu quero ir além,
+você já deve ter visto alguns posts em inglês ou em português, de como fazer o seu primeiro deploy no <a href="https://www.heroku.com/">Heroku</a>. É simples! Como o Flask é o meu coringa pra quando eu preciso desenvolver algo simples, o <a href="https://www.heroku.com/">Heroku</a> é o meu parque de diversões. Onde eu posso simplesmente com um git push, ter a minha aplicação em produção. Com o tempo, fazendo a mesma coisa, eu resolvi criar uma extensão para o <a href="http://flask.pocoo.org/">Flask</a>: o <a href="https://github.com/riquellopes/boot-flask">BootFlask</a>. Com ele você cria uma aplicação simples, e ganha algum tempo para fazer o que realmente importa. Mas vamos ao que interessa.</p>
+<h4>Primeiro passo - Montar o ambiente:</h4>
+<p>No último post eu mostrei para vocês o benefício que você tem em usar a ferramenta <a href="https://virtualenv.readthedocs.org/en/latest/">virtualenv</a>, se tiver alguma duvida, volta lá no <a href="http://blog.henriquelopes.com.br/simples-flask-app.html">post</a> e depois volte aqui. Dessa vez eu vou adicionar mais baterias nesse app eu vou usar o <a href="https://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a> para ficar mais fácil ainda. Qualquer duvida é só comentar que eu te explicarei. Mais básicamente o <a href="https://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a> cria uma camada em cima do <a href="https://virtualenv.readthedocs.org/en/latest/">virtualenv</a> e cria novos comandos para facilitar o seu dia a dia.
+Os comandos que eu vou utilizar abaixo, são comandos do <a href="https://virtualenvwrapper.readthedocs.org/en/latest/">virtualenvwrapper</a>. Em breve vou escrever um novo post, para falar sobre isso.</p>
+<div class="codehilite"><pre>mkvirtualenv hello-heroku
+pip install https://github.com/riquellopes/boot-flask/tarball/master
+</pre></div>
+
+
+<h4>Criando meu primeiro projeto com BootFlask:</h4>
+<p>Para criar um novo projeto com <a href="https://github.com/riquellopes/boot-flask">BootFlask</a> você deve executar o bootflask com o argumento -p.
+O -p é utilizado para informar o nome do projeto, após executar esse comando, a arquitetura básica de arquivos é criada.</p>
+<div class="codehilite"><pre>bootflask -p hello-heroku
+</pre></div>
+
+
+<p>Ainda faltam alguns arquivos, um deles é o requirements.txt, esse arquivo é utilizado pelo <a href="https://www.heroku.com/">Heroku</a> para indentificar quais pacotes do seu projeto Python, precisam ser instalados. O <a href="https://pip.pypa.io/en/stable/reference/pip_freeze/#id4">freeze</a> é o comando do gerenciador de pacotes pip, para recuperar todos os pacotes que seu environment possui, quando você executar o comando pip freeze &gt; requirements.txt, ele vai pegar todo o output e escrever no arquivo requirements.txt. Após criar o requirements.txt abra o arquivo, no editor de sua preferência, e remova o BootFlask==0.1 do arquivo, você não vai precisar dele no <a href="https://www.heroku.com/">Heroku</a>.</p>
+<div class="codehilite"><pre>pip freeze
+
+<span class="nv">Flask</span><span class="o">==</span>0.10.1
+<span class="nv">itsdangerous</span><span class="o">==</span>0.24
+<span class="nv">Jinja2</span><span class="o">==</span>2.8
+<span class="nv">MarkupSafe</span><span class="o">==</span>0.23
+<span class="nv">Werkzeug</span><span class="o">==</span>0.11.3
+<span class="nv">wheel</span><span class="o">==</span>0.24.0
+</pre></div>
+
+
+<p>Se você ainda não tiver iniciado o git para seu projeto, faça isso agora com o comando <a href="https://git-scm.com/docs/git-init">git init</a>, é bem simples. E você já pode fazer seu primeiro <a href="https://git-scm.com/docs/git-commit">commit</a>.</p>
+<div class="codehilite"><pre>git init
+git add -A
+git commit -am <span class="s2">&quot;iniciando app.&quot;</span>
+</pre></div>
+
+
+<h4>Segundo passo - Criando a sua aplicação na interface do Heroku</h4>
+<p>A interface no Heroku é muito intuitiva e você não vai encontrar grandes problemas para criar um novo projeto.
+Após sua autenticação no Heroku, basta você clicar em create app,
+<img alt="alt text" src="http://blog.henriquelopes.com.br/imagens/create-new-app.png" title="Create new App" /></p>
+<p>Após você clicar em create app, você será encaminhado para a tela abaixo. o campo App Name não é obrigatório,
+mas se você quiser dar um nome legal para a sua aplicação fique a vontade.
+<img alt="alt text" src="http://blog.henriquelopes.com.br/imagens/create-app.png" title="Create App" /></p>
+<p>Depois dessa difícil tarefa, você será levado para a ultima tela, onde você receberá algumas instruções que você deve executar na sua máquina. Se você não possui o <a href="https://toolbelt.heroku.com/">Heroku ToolBelt</a>, esse é um bom momento para instalar.
+<img alt="alt text" src="http://blog.henriquelopes.com.br/imagens/deploy-your-changes.png" title="Deploy you changes" /></p>
+<h4>Terceiro passo - Configurando variáveis locais e fazendo seu primeiro deploy:</h4>
+<p>O <a href="https://www.heroku.com/">Heroku</a> utiliza do <a href="https://git-scm.com/docs/git-push">git push</a> para fazer o deploy da sua aplicação, não tem nada de complicado nisso, a única coisa que você precisa fazer é configurar o seu <a href="https://git-scm.com/docs/git-remote">remote</a>, o <a href="https://toolbelt.heroku.com/">Heroku ToolBelt</a> possui um alias para isso, vamos executar esse comando agora.</p>
+<div class="codehilite"><pre>heroku git:remote -a O_NOME_DO_APP_DEVE_SER_ADICIONADO_AQUI
+</pre></div>
+
+
+<p>Esse é o unico comando que precisa ser executado na sua máquina, para partir para o deploy. E vamos fazer isso agora mesmo!</p>
+<div class="codehilite"><pre>git push
+</pre></div>
+
+
+<p>E num passe de mágica a sua aplicação está me produção. Acho que não poderia ter um jeito mais fácil de fazer isso. Como eu sempre preso pelo "show me the code", ai estão os meus:</p>
+<ul>
+<li><a href="http://mighty-stream-1291.herokuapp.com">Projeto em produção</a></li>
+<li><a href="https://github.com/riquellopes/hello-heroku">Código do projeto</a></li>
+</ul><p>There are <a href="http://riquellopes.github.io/fazendo-seu-deploy-no-heroku.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html" rel="bookmark"
+                           title="Permalink to A vida e a roda gigante">A vida e a roda gigante</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-01-10T15:43:00-02:00">
                 Published: Sun 10 January 2016
@@ -37,16 +122,16 @@
         </address>
 <p>In <a href="http://riquellopes.github.io/category/vida.html">Vida</a>.</p>
 <p>tags: <a href="http://riquellopes.github.io/tag/empreendedorismo.html">empreendedorismo</a> </p>
-</footer><!-- /.post-info --><p>Hoje conversei por alguns minutos com um amigo sobre empreendedorismo e atitudes que tomamos ou deixamos de tomar, que influenciam a nossa vida. Depois encerramos o assunto e esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.</p>
-<p>A maioria de nós queremos ser vencedores, queremos de alguma forma obter sucesso, alguns da forma errada e outras da forma correta. Alguns, para isso, vão fazer concurso público, outros vão fazer faculdade, outros vão abrir empresas e alguns vão apenas aguardar. Mas todas elas vão tomar decisões.</p>
-<h5>E o que a roda gigante tem a ver com minha vida?</h5>
-<p>Para e pensa, uma <a href="https://pt.wikipedia.org/wiki/Roda-gigante">roda gigante</a> é um circulo na qual você está sentado em uma cadeirinha enquanto ela gira. E pensa agora como é maneiro você chegar lá no topo e ver toda aquela vista, e como é chato ou frustante quando ela desce para dar outra volta. Essa é finalidade dela: dar voltas. Mas e se fosse possivel parar lá em cima por alguns minutos, para que você pudesse aproveitar a vista? Acho que se você tivesse o controle da roda gigante, você faria isso. A vida é da mesma forma, ela é apenas um estado, nós apenas passamos por ele. Trazendo um pouco para o momento que Brasil ou e outros países passam, existe demisão em massa, pessoas que possuiam empregos excelentes, com salários maravilhosos, agora são apenas ex-empregados. E se essas pessoas, ao invés de ficar apenas esbanjando tudo que estavam ganhando, tivessem aplicado em conhecimento? Acho eu na minha humilde ignorância, que eles estariam bem melhores hoje, mesmo que sem emprego. Pois eles teriam o conhecimento na mão. A roda gigante dessas pessoas agora está embaixo, onde a vista não é linda para se apreciar.</p>
-<h5>Como controlar a roda gigante?</h5>
-<p>Então, se tudo é apenas um estado, até a volta da roda gigante, como eu faço para obter o controle dessa roda? Bom eu tenho uma notícia triste, controlar a roda é muito difícil, assim como a vida. Mas o que eu posso perceber nessa minha curta vida é, só os bons conseguem fazer a roda parar por mais tempo, na parte de cima, onde a vista é mais bonita. Nesse modelo de vida na qual eu uso a roda gigante como comparativo, o que deve ser feito e tentar passar o máximo de tempo na parte superior da roda, pois é nela que está o sucesso. E nesse momento em que o sucesso está nas suas mãos, você não deve desperdiçar, pois ele é único. Conheça pessoas, faça <a href="https://pt.wikipedia.org/wiki/Networking">networking</a>, vá a eventos e fale com pessoas. Nesse momento o sucesso está com você, todos vão querer estar ao seu lado. Isso vai ajudar você a controlar a sua roda gigante, a te deixar um tempo a mais na vista mas linda.</p><p>There are <a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html#disqus_thread">comments</a>.</p>                </article>
+</footer><!-- /.post-info -->                <p>Hoje conversei por alguns minutos com um amigo sobre empreendedorismo e atitudes que tomamos ou deixamos de tomar, que influenciam a nossa vida. Depois encerramos o assunto e esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.</p>
+<p>A ...</p>
+                <a class="readmore" href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html">read more</a>
+<p>There are <a href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 1
 </p>
-            </aside><!-- /#featured -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>

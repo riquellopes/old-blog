@@ -1,5 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Henrique Lopes</title><link href="http://riquellopes.github.io/" rel="alternate"></link><link href="http://riquellopes.github.io/feeds/vida.atom.xml" rel="self"></link><id>http://riquellopes.github.io/</id><updated>2016-01-10T15:43:00-02:00</updated><entry><title>A vida e a roda gigante</title><link href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html" rel="alternate"></link><updated>2016-01-10T15:43:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-10:a-vida-e-a-roda-gigante.html</id><summary type="html">&lt;p&gt;Hoje conversei por alguns minutos com um amigo sobre empreendedorismo e atitudes que tomamos ou deixamos de tomar, que influenciam a nossa vida. Depois encerramos o assunto e esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Henrique Lopes</title><link href="http://riquellopes.github.io/" rel="alternate"></link><link href="http://riquellopes.github.io/feeds/vida.atom.xml" rel="self"></link><id>http://riquellopes.github.io/</id><updated>2016-01-17T17:48:00-02:00</updated><entry><title>Fazendo seu deploy do Heroku</title><link href="http://riquellopes.github.io/fazendo-seu-deploy-no-heroku.html" rel="alternate"></link><updated>2016-01-17T17:48:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-17:fazendo-seu-deploy-no-heroku.html</id><summary type="html">&lt;p&gt;Semana passada eu mostrei como era simples você criar o seu primeiro app web com Python,
+&lt;a href="http://blog.henriquelopes.com.br/simples-flask-app.html"&gt;simples flask app&lt;/a&gt;. Hoje eu quero ir além,
+você já deve ter visto alguns posts em inglês ou em português, de como fazer o seu primeiro deploy no &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt;. É simples! Como o Flask é o meu coringa pra quando eu preciso desenvolver algo simples, o &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt; é o meu parque de diversões. Onde eu posso simplesmente com um git push, ter a minha aplicação em produção. Com o tempo, fazendo a mesma coisa, eu resolvi criar uma extensão para o &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;: o &lt;a href="https://github.com/riquellopes/boot-flask"&gt;BootFlask&lt;/a&gt;. Com ele você cria uma aplicação simples, e ganha algum tempo para fazer o que realmente importa. Mas vamos ao que interessa.&lt;/p&gt;
+&lt;h4&gt;Primeiro passo - Montar o ambiente:&lt;/h4&gt;
+&lt;p&gt;No último post eu mostrei para vocês o benefício que você tem em usar a ferramenta &lt;a href="https://virtualenv.readthedocs.org/en/latest/"&gt;virtualenv&lt;/a&gt;, se tiver alguma duvida, volta lá no &lt;a href="http://blog.henriquelopes.com.br/simples-flask-app.html"&gt;post&lt;/a&gt; e depois volte aqui. Dessa vez eu vou adicionar mais baterias nesse app eu vou usar o &lt;a href="https://virtualenvwrapper.readthedocs.org/en/latest/"&gt;virtualenvwrapper&lt;/a&gt; para ficar mais fácil ainda. Qualquer duvida é só comentar que eu te explicarei. Mais básicamente o &lt;a href="https://virtualenvwrapper.readthedocs.org/en/latest/"&gt;virtualenvwrapper&lt;/a&gt; cria uma camada em cima do &lt;a href="https://virtualenv.readthedocs.org/en/latest/"&gt;virtualenv&lt;/a&gt; e cria novos comandos para facilitar o seu dia a dia.
+Os comandos que eu vou utilizar abaixo, são comandos do &lt;a href="https://virtualenvwrapper.readthedocs.org/en/latest/"&gt;virtualenvwrapper&lt;/a&gt;. Em breve vou escrever um novo post, para falar sobre isso.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;mkvirtualenv hello-heroku
+pip install https://github.com/riquellopes/boot-flask/tarball/master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Criando meu primeiro projeto com BootFlask:&lt;/h4&gt;
+&lt;p&gt;Para criar um novo projeto com &lt;a href="https://github.com/riquellopes/boot-flask"&gt;BootFlask&lt;/a&gt; você deve executar o bootflask com o argumento -p.
+O -p é utilizado para informar o nome do projeto, após executar esse comando, a arquitetura básica de arquivos é criada.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;bootflask -p hello-heroku
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Ainda faltam alguns arquivos, um deles é o requirements.txt, esse arquivo é utilizado pelo &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt; para indentificar quais pacotes do seu projeto Python, precisam ser instalados. O &lt;a href="https://pip.pypa.io/en/stable/reference/pip_freeze/#id4"&gt;freeze&lt;/a&gt; é o comando do gerenciador de pacotes pip, para recuperar todos os pacotes que seu environment possui, quando você executar o comando pip freeze &amp;gt; requirements.txt, ele vai pegar todo o output e escrever no arquivo requirements.txt. Após criar o requirements.txt abra o arquivo, no editor de sua preferência, e remova o BootFlask==0.1 do arquivo, você não vai precisar dele no &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;pip freeze
+
+&lt;span class="nv"&gt;Flask&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.10.1
+&lt;span class="nv"&gt;itsdangerous&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.24
+&lt;span class="nv"&gt;Jinja2&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;2.8
+&lt;span class="nv"&gt;MarkupSafe&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.23
+&lt;span class="nv"&gt;Werkzeug&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.11.3
+&lt;span class="nv"&gt;wheel&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;0.24.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Se você ainda não tiver iniciado o git para seu projeto, faça isso agora com o comando &lt;a href="https://git-scm.com/docs/git-init"&gt;git init&lt;/a&gt;, é bem simples. E você já pode fazer seu primeiro &lt;a href="https://git-scm.com/docs/git-commit"&gt;commit&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;git init
+git add -A
+git commit -am &lt;span class="s2"&gt;&amp;quot;iniciando app.&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Segundo passo - Criando a sua aplicação na interface do Heroku&lt;/h4&gt;
+&lt;p&gt;A interface no Heroku é muito intuitiva e você não vai encontrar grandes problemas para criar um novo projeto.
+Após sua autenticação no Heroku, basta você clicar em create app,
+&lt;img alt="alt text" src="http://blog.henriquelopes.com.br/imagens/create-new-app.png" title="Create new App" /&gt;&lt;/p&gt;
+&lt;p&gt;Após você clicar em create app, você será encaminhado para a tela abaixo. o campo App Name não é obrigatório,
+mas se você quiser dar um nome legal para a sua aplicação fique a vontade.
+&lt;img alt="alt text" src="http://blog.henriquelopes.com.br/imagens/create-app.png" title="Create App" /&gt;&lt;/p&gt;
+&lt;p&gt;Depois dessa difícil tarefa, você será levado para a ultima tela, onde você receberá algumas instruções que você deve executar na sua máquina. Se você não possui o &lt;a href="https://toolbelt.heroku.com/"&gt;Heroku ToolBelt&lt;/a&gt;, esse é um bom momento para instalar.
+&lt;img alt="alt text" src="http://blog.henriquelopes.com.br/imagens/deploy-your-changes.png" title="Deploy you changes" /&gt;&lt;/p&gt;
+&lt;h4&gt;Terceiro passo - Configurando variáveis locais e fazendo seu primeiro deploy:&lt;/h4&gt;
+&lt;p&gt;O &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt; utiliza do &lt;a href="https://git-scm.com/docs/git-push"&gt;git push&lt;/a&gt; para fazer o deploy da sua aplicação, não tem nada de complicado nisso, a única coisa que você precisa fazer é configurar o seu &lt;a href="https://git-scm.com/docs/git-remote"&gt;remote&lt;/a&gt;, o &lt;a href="https://toolbelt.heroku.com/"&gt;Heroku ToolBelt&lt;/a&gt; possui um alias para isso, vamos executar esse comando agora.&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;heroku git:remote -a O_NOME_DO_APP_DEVE_SER_ADICIONADO_AQUI
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Esse é o unico comando que precisa ser executado na sua máquina, para partir para o deploy. E vamos fazer isso agora mesmo!&lt;/p&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;git push
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;E num passe de mágica a sua aplicação está me produção. Acho que não poderia ter um jeito mais fácil de fazer isso. Como eu sempre preso pelo "show me the code", ai estão os meus:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://mighty-stream-1291.herokuapp.com"&gt;Projeto em produção&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/riquellopes/hello-heroku"&gt;Código do projeto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="flask"></category><category term="python"></category><category term="heroku"></category><category term="deploy"></category></entry><entry><title>A vida e a roda gigante</title><link href="http://riquellopes.github.io/a-vida-e-a-roda-gigante.html" rel="alternate"></link><updated>2016-01-10T15:43:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-10:a-vida-e-a-roda-gigante.html</id><summary type="html">&lt;p&gt;Hoje conversei por alguns minutos com um amigo sobre empreendedorismo e atitudes que tomamos ou deixamos de tomar, que influenciam a nossa vida. Depois encerramos o assunto e esse tópico veio a minha mente, a similaridade que esse briquedo tão conhecido dos parques pode ter com a nossa vida.&lt;/p&gt;
 &lt;p&gt;A maioria de nós queremos ser vencedores, queremos de alguma forma obter sucesso, alguns da forma errada e outras da forma correta. Alguns, para isso, vão fazer concurso público, outros vão fazer faculdade, outros vão abrir empresas e alguns vão apenas aguardar. Mas todas elas vão tomar decisões.&lt;/p&gt;
 &lt;h5&gt;E o que a roda gigante tem a ver com minha vida?&lt;/h5&gt;
 &lt;p&gt;Para e pensa, uma &lt;a href="https://pt.wikipedia.org/wiki/Roda-gigante"&gt;roda gigante&lt;/a&gt; é um circulo na qual você está sentado em uma cadeirinha enquanto ela gira. E pensa agora como é maneiro você chegar lá no topo e ver toda aquela vista, e como é chato ou frustante quando ela desce para dar outra volta. Essa é finalidade dela: dar voltas. Mas e se fosse possivel parar lá em cima por alguns minutos, para que você pudesse aproveitar a vista? Acho que se você tivesse o controle da roda gigante, você faria isso. A vida é da mesma forma, ela é apenas um estado, nós apenas passamos por ele. Trazendo um pouco para o momento que Brasil ou e outros países passam, existe demisão em massa, pessoas que possuiam empregos excelentes, com salários maravilhosos, agora são apenas ex-empregados. E se essas pessoas, ao invés de ficar apenas esbanjando tudo que estavam ganhando, tivessem aplicado em conhecimento? Acho eu na minha humilde ignorância, que eles estariam bem melhores hoje, mesmo que sem emprego. Pois eles teriam o conhecimento na mão. A roda gigante dessas pessoas agora está embaixo, onde a vista não é linda para se apreciar.&lt;/p&gt;

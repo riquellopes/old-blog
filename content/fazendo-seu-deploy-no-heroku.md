@@ -56,11 +56,11 @@ Após sua autenticação no Heroku, basta você clicar em create app,
 
 Após você clicar em create app, você será encaminhado para a tela abaixo. o campo App Name não é obrigatório,
 mas se você quiser dar um nome legal para a sua aplicação fique a vontade.
-![Create app](http://blog.henriquelopes.com.br/imagens/create-app.png "Create App")
+![Create app](http://res.cloudinary.com/madeinhouse/image/upload/c_scale,w_780/v1453126092/create-app_ciuxw3.png "Create App")
 
 
 Depois dessa difícil tarefa, você será levado para a ultima tela, onde você receberá algumas instruções que você deve executar na sua máquina. Se você não possui o [Heroku ToolBelt](https://toolbelt.heroku.com/), esse é um bom momento para instalar.
-![Deploy you changes](http://blog.henriquelopes.com.br/imagens/deploy-your-changes.png "Deploy you changes")
+![Deploy you changes](http://res.cloudinary.com/madeinhouse/image/upload/c_scale,w_780/v1453126097/deploy-your-changes_gaeoyq.png "Deploy you changes")
 
 
 #### Terceiro passo - Configurando variáveis locais e fazendo seu primeiro deploy:

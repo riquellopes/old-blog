@@ -42,9 +42,9 @@ Após sua autenticação no Heroku, basta você clicar em create app,
 &lt;img alt="Create new app" src="//res.cloudinary.com/madeinhouse/image/upload/c_scale,w_780/v1453126089/create-new-app_mqevjw.png" title="Create new App" /&gt;&lt;/p&gt;
 &lt;p&gt;Após você clicar em create app, você será encaminhado para a tela abaixo. o campo App Name não é obrigatório,
 mas se você quiser dar um nome legal para a sua aplicação fique a vontade.
-&lt;img alt="Create app" src="http://blog.henriquelopes.com.br/imagens/create-app.png" title="Create App" /&gt;&lt;/p&gt;
+&lt;img alt="Create app" src="http://res.cloudinary.com/madeinhouse/image/upload/c_scale,w_780/v1453126092/create-app_ciuxw3.png" title="Create App" /&gt;&lt;/p&gt;
 &lt;p&gt;Depois dessa difícil tarefa, você será levado para a ultima tela, onde você receberá algumas instruções que você deve executar na sua máquina. Se você não possui o &lt;a href="https://toolbelt.heroku.com/"&gt;Heroku ToolBelt&lt;/a&gt;, esse é um bom momento para instalar.
-&lt;img alt="Deploy you changes" src="http://blog.henriquelopes.com.br/imagens/deploy-your-changes.png" title="Deploy you changes" /&gt;&lt;/p&gt;
+&lt;img alt="Deploy you changes" src="http://res.cloudinary.com/madeinhouse/image/upload/c_scale,w_780/v1453126097/deploy-your-changes_gaeoyq.png" title="Deploy you changes" /&gt;&lt;/p&gt;
 &lt;h4&gt;Terceiro passo - Configurando variáveis locais e fazendo seu primeiro deploy:&lt;/h4&gt;
 &lt;p&gt;O &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt; utiliza do &lt;a href="https://git-scm.com/docs/git-push"&gt;git push&lt;/a&gt; para fazer o deploy da sua aplicação, não tem nada de complicado nisso, a única coisa que você precisa fazer é configurar o seu &lt;a href="https://git-scm.com/docs/git-remote"&gt;remote&lt;/a&gt;, o &lt;a href="https://toolbelt.heroku.com/"&gt;Heroku ToolBelt&lt;/a&gt; possui um alias para isso, vamos executar esse comando agora.&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;heroku git:remote -a O_NOME_DO_APP_DEVE_SER_ADICIONADO_AQUI

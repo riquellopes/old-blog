@@ -1,7 +1,7 @@
 Title: Fazendo seu deploy do Heroku
 Date: 2016-01-17 17:48
 Tags: flask, python, heroku, deploy
-Category: Vida
+Category: dev
 Slug: fazendo-seu-deploy-no-heroku
 Author: Henrique Lopes
 

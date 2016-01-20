@@ -1,8 +1,8 @@
-Title: Fazendo seu deploy no Heroku
+Title: Como fazer seu primeiro deploy no Heroku
 Date: 2016-01-17 17:48
 Tags: flask, python, heroku, deploy
-Category: dev
-Slug: fazendo-seu-deploy-no-heroku
+Category: Dev
+Slug: como-fazer-seu-primeiro-deploy-no-heroku
 Author: Henrique Lopes
 
 Semana passada eu mostrei como era simples você criar o seu primeiro app web com Python,

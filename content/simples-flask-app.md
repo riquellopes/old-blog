@@ -1,7 +1,7 @@
 Title: Simples Flask App
 Date: 2016-01-11 21:57
 Tags: python, flask, dev
-Category: dev
+Category: Dev
 Slug: simples-flask-app
 Author: Henrique Lopes
 

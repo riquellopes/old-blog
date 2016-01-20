@@ -35,10 +35,10 @@ DEFAULT_PAGINATION = 3
 # RELATIVE_URLS = True
 
 MD_EXTENSIONS = (['codehilite', 'extra'])
-STATIC_PATHS = ['extra/CNAME', 'imagens', 'extras/robots.txt']
+STATIC_PATHS = ['extra/CNAME', 'imagens', 'extra/robots.txt']
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
-    'extras/robots.txt': {'path': 'robots.txt'}
+    'extra/robots.txt': {'path': 'robots.txt'}
 }
 
 # Plugins

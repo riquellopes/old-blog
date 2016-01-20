@@ -38,6 +38,11 @@ MD_EXTENSIONS = (['codehilite', 'extra'])
 STATIC_PATHS = ['extra/CNAME', 'imagens', ]
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
 
+# Plugins
+PLUGIN_PATHS = [
+    'pelican-plugins',
+]
+
 PLUGINS = ["sitemap"]
 SITEMAP = {
     'format': 'xml',

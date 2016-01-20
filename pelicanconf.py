@@ -37,3 +37,18 @@ DEFAULT_PAGINATION = 3
 MD_EXTENSIONS = (['codehilite', 'extra'])
 STATIC_PATHS = ['extra/CNAME', 'imagens', ]
 EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}, }
+
+PLUGINS = ["sitemap"]
+SITEMAP = {
+    'format': 'xml',
+    'priorities': {
+        'articles': 0.8,
+        'indexes': 0.5,
+        'pages': 0.3
+    },
+    'changefreqs': {
+        'articles': 'daily',
+        'indexes': 'daily',
+        'pages': 'monthly'
+    }
+}

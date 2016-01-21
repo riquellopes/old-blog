@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Henrique Lopes</title><link href="http://riquellopes.github.io/" rel="alternate"></link><link href="http://riquellopes.github.io/feeds/all.atom.xml" rel="self"></link><id>http://riquellopes.github.io/</id><updated>2016-01-20T09:05:00-02:00</updated><entry><title>Como fazer seu primeiro deploy no Heroku</title><link href="http://riquellopes.github.io/como-fazer-seu-primeiro-deploy-no-heroku.html" rel="alternate"></link><updated>2016-01-17T17:48:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-17:como-fazer-seu-primeiro-deploy-no-heroku.html</id><summary type="html">&lt;p&gt;Semana passada eu mostrei como era simples você criar o seu primeiro app web com Python,
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Henrique Lopes</title><link href="http://riquellopes.github.io/" rel="alternate"></link><link href="http://riquellopes.github.io/feeds/all.atom.xml" rel="self"></link><id>http://riquellopes.github.io/</id><updated>2016-01-21T09:00:00-02:00</updated><entry><title>Como testar a velocidade da sua internet com Python</title><link href="http://riquellopes.github.io/como-testar-a-velocidade-da-sua-internet-com-python.html" rel="alternate"></link><updated>2016-01-21T09:00:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-21:como-testar-a-velocidade-da-sua-internet-com-python.html</id><summary type="html">&lt;p&gt;Python sempre me surpreende por sua versatilidade e sua usabilidade. Resolvi buscar no &lt;a href="https://www.google.com.br/"&gt;google&lt;/a&gt; alguma lib python que eu pudesse utilizar para medir a velocidade da
+internet da minha casa. E logo na primeira tacada me deparei com esse post: &lt;a href="http://www.raspberrypi-spy.co.uk/2015/03/measuring-internet-speed-in-python-using-speedtest-cli/"&gt;Measuring Internet Speed In Python Using Speedtest-cli&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Matt Martz que é o autor do projeto, criou uma &lt;a href="https://www.techopedia.com/definition/3337/command-line-interface-cli"&gt;interface cli&lt;/a&gt;, utilizando o serviço &lt;a href="http://www.speedtest.net"&gt;speedtest.net&lt;/a&gt;.&lt;/p&gt;
+&lt;h4&gt;Instalando&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;pip install speedtest-cli
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;Executando SpeedTest&lt;/h4&gt;
+&lt;div class="codehilite"&gt;&lt;pre&gt;speedtest
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Esse foi o meu resultado.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="//blog.henriquelopes.com.br/imagens/screen-shot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;O speedtest possui um feature bem legal, na qual você pode passar o parâmetro -share para o programa,
+e ele vai criar uma imagem online do seu resultado, que você pode compartilhar com seus amigos.&lt;/p&gt;
+&lt;p&gt;No &lt;a href="https://github.com/sivel/speedtest-cli"&gt;github do projeto&lt;/a&gt; você vai encontrar mais informações sobre
+como você pode utilizar.&lt;/p&gt;</summary><category term="python"></category><category term="ferramenta"></category></entry><entry><title>Como fazer seu primeiro deploy no Heroku</title><link href="http://riquellopes.github.io/como-fazer-seu-primeiro-deploy-no-heroku.html" rel="alternate"></link><updated>2016-01-17T17:48:00-02:00</updated><author><name>Henrique Lopes</name></author><id>tag:riquellopes.github.io,2016-01-17:como-fazer-seu-primeiro-deploy-no-heroku.html</id><summary type="html">&lt;p&gt;Semana passada eu mostrei como era simples você criar o seu primeiro app web com Python,
 &lt;a href="http://blog.henriquelopes.com.br/simples-flask-app.html"&gt;simples flask app&lt;/a&gt;. Hoje eu quero ir além,
 você já deve ter visto alguns posts em inglês ou em português, de como fazer o seu primeiro deploy no &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt;. É simples! Como o Flask é o meu coringa pra quando eu preciso desenvolver algo simples, o &lt;a href="https://www.heroku.com/"&gt;Heroku&lt;/a&gt; é o meu parque de diversões. Onde eu posso simplesmente com um git push, ter a minha aplicação em produção. Com o tempo, fazendo a mesma coisa, eu resolvi criar uma extensão para o &lt;a href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;: o &lt;a href="https://github.com/riquellopes/boot-flask"&gt;BootFlask&lt;/a&gt;. Com ele você cria uma aplicação simples, e ganha algum tempo para fazer o que realmente importa. Mas vamos ao que interessa.&lt;/p&gt;
 &lt;h4&gt;Primeiro passo - Montar o ambiente:&lt;/h4&gt;

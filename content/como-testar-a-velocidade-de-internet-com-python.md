@@ -5,7 +5,7 @@ Category: Dev
 Slug: como-testar-a-velocidade-da-internet-com-python
 Author: Henrique Lopes
 
-Python sempre me surpreende por sua versalidade e sua usabilidade. Resolvi buscar no [google](https://www.google.com.br/) alguma lib python que eu pode-se utilizar para medir a velocidade da
+Python sempre me surpreende por sua versatilidade e sua usabilidade. Resolvi buscar no [google](https://www.google.com.br/) alguma lib python que eu pode-se utilizar para medir a velocidade da
 internet da minha casa. E logo na primeira tacada me deparei com esse post, [Measuring Internet Speed In Python Using Speedtest-cli](http://www.raspberrypi-spy.co.uk/2015/03/measuring-internet-speed-in-python-using-speedtest-cli/).
 
 Matt Martz que é o autor do projeto, criou uma [interface cli](https://www.techopedia.com/definition/3337/command-line-interface-cli), utilizando o serviço [speedtest.net](http://www.speedtest.net).

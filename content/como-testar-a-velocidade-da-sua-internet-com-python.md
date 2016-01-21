@@ -1,5 +1,6 @@
 Title: Como testar a velocidade da sua internet com Python
 Date: 2016-01-21 09:00
+Modified: 2016-01-21 09:30
 Tags: python, ferramenta
 Category: Dev
 Slug: como-testar-a-velocidade-da-sua-internet-com-python
@@ -24,7 +25,7 @@ speedtest
 
 Esse foi o meu resultado.
 
-![](//blog.henriquelopes.com.br/imagens/screen-shot.png)
+![](//res.cloudinary.com/madeinhouse/image/upload/c_scale,w_680/v1453418830/screen-shot_m1pgrn.png)
 
 O speedtest possui um feature bem legal, na qual você pode passar o parâmetro -share para o programa,
 e ele vai criar uma imagem online do seu resultado, que você pode compartilhar com seus amigos.

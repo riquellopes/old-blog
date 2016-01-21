@@ -5,35 +5,35 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://riquellopes.github.io/</loc>
-<lastmod>2016-01-21T16:22:56-00:00</lastmod>
+<lastmod>2016-01-21T23:32:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://riquellopes.github.io/archives.html</loc>
-<lastmod>2016-01-21T16:22:56-00:00</lastmod>
+<lastmod>2016-01-21T23:32:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://riquellopes.github.io/tags.html</loc>
-<lastmod>2016-01-21T16:22:56-00:00</lastmod>
+<lastmod>2016-01-21T23:32:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://riquellopes.github.io/categories.html</loc>
-<lastmod>2016-01-21T16:22:56-00:00</lastmod>
+<lastmod>2016-01-21T23:32:07-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://riquellopes.github.io/como-testar-a-velocidade-da-sua-internet-com-python.html</loc>
-<lastmod>2016-01-21T09:00:00-02:00</lastmod>
+<lastmod>2016-01-21T09:30:00-02:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.8</priority>
 </url>
@@ -68,7 +68,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://riquellopes.github.io/category/dev.html</loc>
-<lastmod>2016-01-21T09:00:00-03:06</lastmod>
+<lastmod>2016-01-21T09:30:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -89,14 +89,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://riquellopes.github.io/tag/python.html</loc>
-<lastmod>2016-01-21T09:00:00-03:06</lastmod>
+<lastmod>2016-01-21T09:30:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://riquellopes.github.io/tag/ferramenta.html</loc>
-<lastmod>2016-01-21T09:00:00-03:06</lastmod>
+<lastmod>2016-01-21T09:30:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -145,7 +145,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://riquellopes.github.io/author/henrique-lopes.html</loc>
-<lastmod>2016-01-21T09:00:00-03:06</lastmod>
+<lastmod>2016-01-21T09:30:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

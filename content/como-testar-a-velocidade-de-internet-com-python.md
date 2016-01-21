@@ -29,5 +29,5 @@ Esse foi o meu resultado.
 O speedtest possui um feature bem legal, na qual você pode passar o parâmetro -share para o programa,
 e ele vai criar uma imagem oline do seu resultado, que você pode compartilhar com seus amigos.
 
-No [github do projeto](https://github.com/sivel/speedtest-cli) você vai encontrar mais informações sobre,
+No [github do projeto](https://github.com/sivel/speedtest-cli) você vai encontrar mais informações sobre
 como você pode utilizar.

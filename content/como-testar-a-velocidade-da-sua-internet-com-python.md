@@ -1,8 +1,8 @@
-Title: Como testar a velocidade da internet com Python
+Title: Como testar a velocidade da sua internet com Python
 Date: 2016-01-21 09:00
 Tags: python, ferramenta
 Category: Dev
-Slug: como-testar-a-velocidade-da-internet-com-python
+Slug: como-testar-a-velocidade-da-sua-internet-com-python
 Author: Henrique Lopes
 
 Python sempre me surpreende por sua versatilidade e sua usabilidade. Resolvi buscar no [google](https://www.google.com.br/) alguma lib python que eu pode-se utilizar para medir a velocidade da

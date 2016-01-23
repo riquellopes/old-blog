@@ -26,4 +26,4 @@ O terceiro livro que li foi indicação de um amigo, [1808](https://pt.wikipedia
 
 
 #### Será que realmente eu mudei?
-Um bom vinho não se faz em 24 horas, em 4 anos ele pode até estar melhor, mais ainda o suficiente. Esse é um processo diário e precisa de constante manuteção e refinamento, para que ele seja apurado e melhorado. A mudança de pensamento é um processo, e esse é o processo que tenho seguido, e tem me auxiliado a chegar aos meus objetivos.
+Um bom vinho não se faz em 24 horas, em 4 anos ele pode até estar melhor, mais ainda não o suficiente. Esse é um processo diário e precisa de constante manutenção e refinamento, para que ele seja apurado e melhorado. A mudança de pensamento é um processo. E esse é o processo que tenho seguido, e tem me auxiliado a chegar aos meus objetivos.

@@ -1,6 +1,5 @@
 Title: A leitura e meus objetivos
-Date: 2016-01-20 01:06
-Modified: 2016-01-22 09:56
+Date: 2016-01-25 09:25
 Tags: empreendedorismo, vida
 Category: Vida
 Slug: a-leitura-e-meus-objetivos

@@ -6,7 +6,7 @@ Category: Dev
 Slug: inicio-de-tudo
 Author: Henrique Lopes
 
-Efim decidi começar a escrever, compartilhar experiências e pensamentos.
+Enfim decidi começar a escrever, compartilhar experiências e pensamentos.
 Esse espaço não será destinado apenas para falar sobre tecnologia, existem outras coisas que eu gosto de fazer, e
 vou passar a compartilhar aqui. Empreendedorismo, música, mercado financeiro, minha loja de usados,
 aqui existe espaço para tudo.

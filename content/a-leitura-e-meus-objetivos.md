@@ -9,7 +9,7 @@ Um dos pilares que eu desejo ter no blog é usar a minha vida como case para aju
 
 
 #### Parar de se sabotar:
-O primeiro passo que eu tive que tomar para que algumas coisas começassem a mudar, foi alterar a forma como eu pensava, e até mesmo como eu via as coisas. E esse é um processo muito complicado, pois eu achava que o modo como eu agia estava correto. Bom eu não estava errado, mas tudo depende de onde você quer chegar, pois a única pessoa que pode sabotar seus planos é você mesmo. É estranho falar isso, como eu posso querer o meu próprio mau? Essa é a mais pura verdade, a culpa é sempre sua, não das outras pessoas. Então para não me sabotar eu comecei a reaprender e me reeducar. Comecei uma rotina de leitura, lia o máximo de coisas, de sites a livros. E como esse processo não envolve apenas leitura eu passei a conversar e observar mais.
+O primeiro passo que eu tive que tomar para que algumas coisas começassem a mudar, foi alterar a forma como eu pensava, e até mesmo como eu via as coisas. E esse é um processo muito complicado, pois eu achava que o modo como eu agia estava correto. Bom eu não estava errado, mas tudo depende de onde você quer chegar, pois a única pessoa que pode sabotar seus planos é você mesmo. É estranho falar isso, como eu posso querer o meu próprio mal? Essa é a mais pura verdade, a culpa é sempre sua, não das outras pessoas. Então para não me sabotar eu comecei a reaprender e me reeducar. Comecei uma rotina de leitura, lia o máximo de coisas, de sites a livros. E como esse processo não envolve apenas leitura eu passei a conversar e observar mais.
 
 
 #### A leitura é um passo muito importante:

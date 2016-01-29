@@ -34,6 +34,7 @@ DEFAULT_PAGINATION = 3
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
+READERS = {"html": None}
 MD_EXTENSIONS = (['codehilite', 'extra'])
 STATIC_PATHS = ['extra/CNAME', 'imagens', 'extra/robots.txt', 'extra/google4907ef7739dd27da.html']
 EXTRA_PATH_METADATA = {

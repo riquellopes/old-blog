@@ -39,7 +39,7 @@ STATIC_PATHS = ['extra/CNAME', 'imagens', 'extra/robots.txt', 'extra/google4907e
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'},
     'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/google4907ef7739dd27da.html': {'path': 'google4907ef7739dd27da.html'},
+    'extra/google4907ef7739dd27da.html': {'path': 'google4907ef7739dd27da.html'}
 }
 
 # Plugins

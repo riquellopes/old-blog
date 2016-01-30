@@ -2,3 +2,8 @@
 	path = pelican-plugins
 	url = https://github.com/getpelican/pelican-plugins.git
 	branch = master
+
+[submodule "pelican-theme"]
+	path = pelican-theme
+	url = https://github.com/fle/pelican-simplegrey.git
+	branch = master

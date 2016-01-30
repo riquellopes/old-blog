@@ -25,7 +25,7 @@ speedtest
 
 Esse foi o meu resultado.
 
-![](//res.cloudinary.com/madeinhouse/image/upload/c_scale,w_680/v1453418830/screen-shot_m1pgrn.png)
+![ScreeShot](//res.cloudinary.com/madeinhouse/image/upload/c_scale,w_680/v1453418830/screen-shot_m1pgrn.png)
 
 O speedtest possui um feature bem legal, na qual você pode passar o parâmetro -share para o programa,
 e ele vai criar uma imagem online do seu resultado, que você pode compartilhar com seus amigos.

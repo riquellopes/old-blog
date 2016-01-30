@@ -14,7 +14,7 @@ TIMEZONE = 'America/Sao_Paulo'
 DEFAULT_LANG = u'pt'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -27,6 +27,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Social widget
 SOCIAL = (('github', 'http://github.com/riquellopes'),
           ('linkedIn', 'https://www.linkedin.com/in/riquellopes'),
+          ('twitter', 'https://twitter.com/riquellopes'),
           ('delicious', 'https://delicious.com/riquellopes'),)
 
 DEFAULT_PAGINATION = 3
@@ -62,3 +63,11 @@ SITEMAP = {
         'pages': 'monthly'
     }
 }
+
+# Theme
+RELATIVE_URLS = True
+THEME = 'pelican-theme/'
+
+DISQUS_SITENAME = 'riquellopes'
+DISQUS_NO_ID = True
+GOOGLE_ANALYTICS = "UA-72238128-1"

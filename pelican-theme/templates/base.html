@@ -20,7 +20,6 @@
     {% if FEED_ALL_RSS %}
     <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
     {% endif %}
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body>
@@ -50,11 +49,16 @@
 	  <div class="wrapper">
 
 		  <div role="main" class="content">
-			<!-- topo-blog -->
-  			<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9390117676358866" data-ad-slot="3398970034" data-ad-format="auto"></ins>
-			<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
+			  <script type="text/javascript">
+			      google_ad_client = "ca-pub-9390117676358866";
+			      google_ad_slot = "9305902839";
+			      google_ad_width = 728;
+			      google_ad_height = 90;
+			  </script>
+			  <!-- top-blog-cabecalho -->
+			  <script type="text/javascript"
+			  src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+			  </script>
 			{% block content %}{% endblock %}
 		  </div>
 

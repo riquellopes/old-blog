@@ -175,9 +175,9 @@ npm test
 
 O último módulo é não menos importante que completou a minha stack, foi o [dotenv](https://www.npmjs.com/package/dotenv). Um site que eu indito para você ler, e ter uma melhor noção
 de boas práticas de software-as-a-service é [The Twelve-Factor APP](http://12factor.net). O tópico que ratifica
-o uso desse módulo é o [III Config](http://12factor.net/config). O [dotenv](https://www.npmjs.com/package/dotenv) permite que você crie enviroments com as configurações que você,
-precisa no seu ambiente local. Ele não é para utilizado em produção. Por default ele vai procurar da raiz
-do seu projeto a variavel de ambiente **.env**. Caso você queira usar outro nome, você precisa passar o [path](https://www.npmjs.com/package/dotenv#path) para [dotenv](https://www.npmjs.com/package/dotenv), não é nenhum bixo de 7 cabeças.
+o uso desse módulo é o [III Config](http://12factor.net/config). O [dotenv](https://www.npmjs.com/package/dotenv) permite que você crie enviroments com as configurações que você
+precisa no seu ambiente local. Ele não é para ser utilizado em produção. Por default ele vai procurar na raiz
+do seu projeto a variável de ambiente **.env**, caso você queira usar outro nome, você precisa passar o [path](https://www.npmjs.com/package/dotenv#path) para [dotenv](https://www.npmjs.com/package/dotenv), não é nenhum bixo de 7 cabeças.
 
 
 #### Express em ação.

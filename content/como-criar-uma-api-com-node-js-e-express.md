@@ -71,7 +71,7 @@ Para acelerar um pouco mais o processo, eu utilizei um queue do módulo, [async]
 
 #### Orm utilizado.
 
-Para persistir esses dados, que não tem uma estrutura muito bem definida eu resolvi utilizar o [mongodb](https://www.mongodb.org/)+[mongolab](https://mongolab.com/)+[mongoose](http://mongoosejs.com/).
+Para persistir esses dados, que não possuem uma estrutura muito bem definida eu resolvi utilizar o [mongodb](https://www.mongodb.org/)+[mongolab](https://mongolab.com/)+[mongoose](http://mongoosejs.com/).
 Nas pesquisas que fiz o [mongoose](http://mongoosejs.com/) é muito difundido, então segui essa mesma linha. O [mongolab](https://mongolab.com/) é um MongoDB-as-a-Service que gosto muito, e como eu não queria pagar nada,
 para ter uma máquina com [mongodb](https://www.mongodb.org/), adicionei mais esse ingrediente a minha stack.
 

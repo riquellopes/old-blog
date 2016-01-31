@@ -183,7 +183,9 @@ do seu projeto a variável de ambiente **.env**, caso você queira usar outro no
 #### Express em ação.
 
 Criar uma aplicação com [express](http://expressjs.com/) é bem simples, ele não foge muito do
-modelo que o [flask](http://flask.pocoo.org/) nos da.
+modelo que o [flask](http://flask.pocoo.org/) nos da. Eu queria que o meu app, fica-se isolado
+do contexto geral, e que de certa forma eu despluga-se ele rapidamente da minha app,
+eu usei a feature *express.Router()* para me permitir fazer isso.
 
 ```javascript
 var express = require("express");
@@ -213,3 +215,9 @@ Para executar app, basta executar o commando abaixo.
 ```bash
 make run
 ```
+
+#### Conclusão.
+
+Espero que tenha atendido as suas expectativas. Duvidas ou sugestões é só comentar no post, que eu
+estou sempre a disposição para ajudar. Não fique acanhado em fazer um [fork](https://help.github.com/articles/fork-a-repo/) e me mandar um [pull request](https://help.github.com/articles/using-pull-requests/)
+com uma melhoria no app.

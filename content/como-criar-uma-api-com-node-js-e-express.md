@@ -5,7 +5,7 @@ Category: Dev
 Slug: como-criar-uma-api-com-node-js-e-express
 Author: Henrique Lopes
 
-Eu sempre fui um cara que gosto de resolver problemas, não criar outros por causa de uma linguagem de
+Eu sou uma pessoa que gosta de resolver problemas, não criar outros por causa de uma linguagem de
 programação. O [PO](http://www.desenvolvimentoagil.com.br/scrum/product_owner) na maioria das vezes não possui competências técnicas para distinguir qual seria a melhor
 linguagem ou arquitetura para o seu produto. Você que está entrando no mercado agora ou almeja entrar, deve ter esse tipo sabiencia. Você também é parte do processo, software é feito por pessoas,
 e são elas que tomam as decisões. Por que eu quis iniciar esse post com essa pequena explanação? Eu sou um pythonista de coração, e adoro usar, quando tenho a possibilidade de resolver os problemas

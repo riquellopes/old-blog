@@ -15,8 +15,8 @@ temos aplicações em [python](https://www.python.org), [nodejs](https://nodejs.
 
 #### Vamos ao que realmente interessa #nodejs.
 
-Eu não tive muita dificuldade para entender o [nodejs](https://nodejs.org/en/), eu já sabia javascript
-muito bem, foi fácil para dar meus primeiros passsos. A unica coisa que me atrapalhou um pouco nesse
+Eu não tive muita dificuldade para entender [nodejs](https://nodejs.org/en/), eu já sabia javascript
+muito bem, foi fácil para dar meus primeiros passos. A unica coisa que me atrapalhou um pouco nesse
 projeto foi montar a minha stack, o [nodejs](https://nodejs.org/en/) possui várias implementações para o que eu estava querendo fazer. Mais conversando com amigos mais fluentes em [nodejs](https://nodejs.org/en/) eu cheguei ao meu produto, uma api para me informar o valor dos proventos pagos por cada [fundo imobiliário](http://www.fundoimobiliario.com.br/). Se quiser já ir dando uma olhada o [link](https://github.com/riquellopes/fii) é esse. Eu vou explicar todo o processo, pode deixar. Vou te dar tudo no esquema.
 
 

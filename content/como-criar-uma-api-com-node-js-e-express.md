@@ -1,5 +1,5 @@
 Title: Como criar uma api com nodejs e express
-Date: 2016-02-02 09:11
+Date: 2016-02-02 08:28
 Tags: nodejs, express, api
 Category: Dev
 Slug: como-criar-uma-api-com-node-js-e-express

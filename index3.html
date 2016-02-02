@@ -42,17 +42,191 @@
 
 
       <article>
-        <h1><a href="http://blog.henriquelopes.com.br/a-leitura-e-meus-objetivos.html">A leitura e meus objetivos</a></h1>
-        <p>Um dos pilares que eu desejo ter no blog é usar a minha vida como case para ajudar outras pessoas. Acredito que isso pode ratificar tudo o que eu escrevo. Eu sou cobaia das próprias coisas que escrevo, desde os temas técnicos com <a href="http://blog.henriquelopes.com.br/tag/python.html">python</a> ou não. E só hoje depois de muito tempo testando eu resolvi iniciar esse blog e compartilhar alguns cases. Eu gosto muito de ler sobre estudos, mas eu gosto ainda mais quando eu os vejo realmente aplicados na vida real. Esse post é um exemplo disso, para que as coisas passassem a ser diferentes, eu tive que passar por um processo, que só eu podeira passar. Vou de um forma simples e direta descrever esse processo, acho até que é bem simples.</p>
-<h4>Parar de se sabotar:</h4>
-<p>O primeiro passo que eu tive que tomar para que algumas coisas começassem a mudar, foi alterar a forma como eu pensava, e até mesmo como eu via as coisas. E esse é um processo muito complicado, pois eu achava que o modo como eu agia estava correto. Bom eu não estava errado, mas tudo depende de onde você quer chegar, pois a única pessoa que pode sabotar seus planos é você mesmo. É estranho falar isso, como eu posso querer o meu próprio mal? Essa é a mais pura verdade, a culpa é sempre sua, não das outras pessoas. Então para não me sabotar eu comecei a reaprender e me reeducar. Comecei uma rotina de leitura, lia o máximo de coisas, de sites a livros. E como esse processo não envolve apenas leitura eu passei a conversar e observar mais.</p>
-<h4>A leitura é um passo muito importante:</h4>
-<p>Dos livros que li, três são os que mais me chamaram a atenção, e eu vou falar um pouco sobre eles aqui.
-O primeiro livro que eu li na vida foi a <a href="https://www.bibliaonline.com.br">Bíblia</a>. Eu sou de família protestante, minha mãe me ensinou desde de pequeno o evangelho e eu o prático até os dias de hoje. Esse post não tem nada a ver com religião, nem com acreditar em Jesus ou não. "E conhecereis a verdade, e a verdade vos libertará." (João 8:32). Esse foi o meu início. Uma dica que te dou, leia a <a href="https://www.bibliaonline.com.br">Bíblia</a> como um livro, e você vai perceber o que você pode fazer.</p>
-<p>O segundo livro eu fiz questão não apenas de ler, mas de ouvir o audio book, algumas vezes. <a href="https://pt.wikipedia.org/wiki/Pai_Rico,_Pai_Pobre">Pai Rico Pai Pobre</a>, esse é um <a href="https://pt.wikipedia.org/wiki/Best-seller">best-seller</a>. Isso foi em 2012, quando esse audio book chegou até as minhas mãos. Eu já tinha visto muitas pessoas falarem sobre esse livro, mas eu nunca tinha dado audiência para isso. Leia esse livro, faça um esforço, consiga emprestado. Mas não passe anos sendo escravo de você mesmo, sendo enganado pela cresças que são passadas, de pai para filho, sem nem percebermos estamos como ratos correndo em uma roda, refém de um processo medíocre.</p>
-<p>O terceiro livro que li foi indicação de um amigo, <a href="https://pt.wikipedia.org/wiki/1808_(livro)">1808</a>. Você pode se perguntar, o que tem um livro que fala sobre o historía do Brasil com a minha forma de pensar? O motivador que eu tive para ler esse livro foi apenas um, conhecer o passado, nos faz conhecer um pouco mais do futuro. Leia o meu post <a href="http://blog.henriquelopes.com.br/a-vida-e-a-roda-gigante.html">A vida e a roda gigante</a>, muita das sacadas que eu tive pra escrever esse post, foi pensando no que esse livro me ensinou, tudo é apenas uma repetição, a história apenas se repete. Estamos em uma Matrix.</p>
-<h4>Será que realmente eu mudei?</h4>
-<p>Um bom vinho não se faz em 24 horas, em quatro anos ele pode até estar melhor, mas ainda não o suficiente. Esse é um processo diário e precisa de constante manutenção e refinamento, para que ele seja apurado e melhorado. A mudança de pensamento é um processo, ele não acontece do dia para noite. E esse é o processo que tenho seguido, e tem me auxiliado a chegar aos meus objetivos. Crie suas próprias metas, use esse material para te ajudar, o inicio é bem complicado quando não se tem referências. Crie seu próprio material. Não passe para os outros uma responsabilidade que é sua.</p>
+        <h1><a href="http://blog.henriquelopes.com.br/como-criar-uma-api-com-node-js-e-express.html">Como criar uma api com nodejs e express</a></h1>
+        <p>Eu sou uma pessoa que gosta de resolver problemas, não criar outros por causa de uma linguagem de programação. O <a href="http://www.desenvolvimentoagil.com.br/scrum/product_owner">PO</a> na maioria das vezes não possui competências técnicas para distinguir qual seria a melhor linguagem ou arquitetura para o seu produto. Você que está entrando no mercado agora ou almeja entrar, deve ter esse tipo sapiência. Você também é parte do processo, software é feito por pessoas, e são elas que tomam as decisões. Por que eu quis iniciar esse post com essa pequena explanação? Eu sou um pythonista de coração, e adoro usar, quando tenho a possibilidade de resolver os problemas pythonicamente, mas no meu dia a dia, eu nem sempre o posso. Hoje na stack que temos no <a href="https://www.hotelurbano.com/">hotelurbano</a>, temos aplicações em <a href="https://www.python.org">python</a>, <a href="https://nodejs.org/en/">nodejs</a>, <a href="http://www.scala-lang.org/">scala</a>, <a href="https://golang.org">go</a>, <a href="https://www.ruby-lang.org/pt/">ruby</a> e <a href="https://secure.php.net/manual/pt_BR/index.php">php</a>. As vezes é necessário desenvolver novas features nessas aplicações, para que elas possam se comunicar com outra aplicação.</p>
+<h4>Vamos ao que realmente interessa #nodejs.</h4>
+<p>Eu não tive muita dificuldade para entender <a href="https://nodejs.org/en/">nodejs</a>, eu já sabia javascript muito bem, então foi fácil para dar meus primeiros passos. A unica coisa que me atrapalhou um pouco nesse projeto foi montar a minha stack, o <a href="https://nodejs.org/en/">nodejs</a> possui várias implementações para o que eu estava querendo fazer. Mas conversando com amigos mais fluentes em <a href="https://nodejs.org/en/">nodejs</a> eu cheguei ao meu produto, uma api para me informar o valor dos proventos pagos por cada <a href="http://www.fundoimobiliario.com.br/">fundo imobiliário</a>. Se quiser já ir dando uma olhada o <a href="https://github.com/riquellopes/fii">link</a> é esse. Eu vou explicar todo o processo, pode deixar. Vou te dar tudo no esquema.</p>
+<p>Eu tentei encontrar alguma api que podesse me fornecer a informação que eu queria, mas não achei nada que fosse de graça. Então acabei criando um <a href="https://pt.wikipedia.org/wiki/Data_scraping">scraping</a>, que raspa essa informação de um outro site. Em python isso é muito tranquilo de se fazer. Com <a href="http://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> e <a href="http://docs.python-requests.org/en/latest/">requests</a>, eu teria isso de forma simples. No <a href="https://nodejs.org/en/">nodejs</a> eu utilizei o <a href="https://www.npmjs.com/package/scrap">scrap</a>, li vários posts que mencionavam ele, então resolvi usar. Para quem já usou jQuery, e sabe um pouco de <a href="https://api.jquery.com/category/selectors/">seletores</a>, não vai encontrar nenhuma dificuldade para utilizar.</p>
+<div class="codehilite"><pre><span class="nx">exports</span><span class="p">.</span><span class="nx">scrap</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">){</span>
+    <span class="nx">scrap</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">$</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">message</span> <span class="o">=</span> <span class="s2">&quot;Serviço indisponível.&quot;</span>
+          <span class="k">if</span><span class="p">(</span> <span class="nx">err</span> <span class="p">){</span>
+              <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">503</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span><span class="nx">message</span><span class="p">});</span>
+          <span class="p">}</span>
+
+          <span class="kd">var</span> <span class="nx">queue</span> <span class="o">=</span> <span class="nx">async</span><span class="p">.</span><span class="nx">queue</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">object</span><span class="p">,</span> <span class="nx">callback</span><span class="p">){</span>
+              <span class="k">return</span> <span class="nx">object</span><span class="p">.</span><span class="nx">save</span><span class="p">(</span><span class="nx">callback</span><span class="p">);</span>
+          <span class="p">},</span> <span class="mi">4</span><span class="p">);</span>
+
+          <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">,</span><span class="s1">&#39;table&#39;</span><span class="p">).</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">){</span>
+              <span class="kd">var</span> <span class="nx">tr</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">,</span><span class="s1">&#39;table&#39;</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+              <span class="kd">var</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+                  <span class="nx">codigo</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+                  <span class="nx">data_base</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">1</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+                  <span class="nx">cotacao_base</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+                  <span class="nx">data_pagamento</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+                  <span class="nx">valor_rendimento</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">4</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+                  <span class="nx">porcentagem_rendimento</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">5</span><span class="p">).</span><span class="nx">text</span><span class="p">(),</span>
+                  <span class="nx">observacao</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;td&quot;</span><span class="p">,</span> <span class="nx">tr</span><span class="p">).</span><span class="nx">eq</span><span class="p">(</span><span class="mi">6</span><span class="p">).</span><span class="nx">text</span><span class="p">()</span>
+              <span class="p">}</span>
+
+              <span class="nx">queue</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="k">new</span> <span class="nx">Fii</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">doc</span><span class="p">){</span>
+                  <span class="k">if</span><span class="p">(</span><span class="nx">error</span><span class="p">){</span>
+                      <span class="nx">queue</span><span class="p">.</span><span class="nx">kill</span><span class="p">();</span>
+                      <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">500</span><span class="p">).</span><span class="nx">json</span><span class="p">(</span>
+                          <span class="p">{</span><span class="nx">message</span><span class="o">:</span><span class="s2">&quot;Erro ao importar as informações.&quot;</span><span class="p">});</span>
+                  <span class="p">}</span>
+              <span class="p">});</span>
+          <span class="p">}</span><span class="c1">// for</span>
+
+          <span class="k">if</span><span class="p">(</span><span class="nx">queue</span><span class="p">.</span><span class="nx">length</span><span class="p">()</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+              <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">503</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span><span class="nx">message</span><span class="p">});</span>
+          <span class="p">}</span>
+
+          <span class="nx">queue</span><span class="p">.</span><span class="nx">drain</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(){</span>
+              <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">(</span>
+                  <span class="p">{</span><span class="nx">message</span><span class="o">:</span> <span class="nx">util</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span>
+                      <span class="s2">&quot;%s fii, foram copiados.&quot;</span><span class="p">,</span> <span class="p">(</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">))});</span>
+          <span class="p">};</span>
+    <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Para acelerar um pouco mais o processo, eu utilizei um queue do módulo, <a href="https://github.com/caolan/async">async</a>. Eu não tinha tanta necessidade de fazer isso, mais como era um protótipo, resolvi adicionar essa fila, para que o meu processo fosse mais performático ainda. O módulo <a href="https://github.com/caolan/async">async</a> possui várias features legais, da uma olhada depois na documentação do projeto.</p>
+<h4>Orm utilizado.</h4>
+<p>Para persistir esses dados, que não possuem uma estrutura muito bem definida eu resolvi utilizar o <a href="https://www.mongodb.org/">mongodb</a>+<a href="https://mongolab.com/">mongolab</a>+<a href="http://mongoosejs.com/">mongoose</a>.
+Nas pesquisas que fiz o <a href="http://mongoosejs.com/">mongoose</a> é muito difundido, então segui essa mesma linha. O <a href="https://mongolab.com/">mongolab</a> é um MongoDB-as-a-Service que eu gosto muito, e como eu não queria pagar nada para ter uma máquina com <a href="https://www.mongodb.org/">mongodb</a>, adicionei mais esse ingrediente a minha stack.</p>
+<div class="codehilite"><pre><span class="kd">var</span> <span class="nx">FiiSchema</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Schema</span><span class="p">({</span>
+    <span class="nx">codigo</span><span class="o">:</span> <span class="p">{</span><span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span> <span class="nx">index</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">required</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span><span class="kc">true</span><span class="p">},</span>
+    <span class="nx">data_base</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="nx">cotacao_base</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="nx">data_pagamento</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="nx">valor_rendimento</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="nx">porcentagem_rendimento</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="nx">baixa_liquides</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="nx">investidor_qualificado</span><span class="o">:</span> <span class="nb">Boolean</span><span class="p">,</span>
+    <span class="nx">observacao</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+    <span class="nx">created</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="nb">Date</span><span class="p">,</span>
+        <span class="k">default</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">fii</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">model</span><span class="p">(</span><span class="s1">&#39;Fii&#39;</span><span class="p">,</span> <span class="nx">FiiSchema</span><span class="p">);</span>
+
+<span class="nx">FiiSchema</span><span class="p">.</span><span class="nx">pre</span><span class="p">(</span><span class="s2">&quot;save&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">next</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">investidor_qualificado</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">codigo</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;*IQ*&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">baixa_liquides</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">codigo</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;*BL*&quot;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">codigo</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">codigo</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="nx">next</span><span class="p">();</span>
+<span class="p">})</span>
+</pre></div>
+
+
+<p>Você pode perceber que utilizei um feature do mongoose, <a href="http://mongoosejs.com/docs/middleware.html">pre save</a>, pois antes que ele persiste a informação, eu precisava que algumas coisas fossem extraidas. Pra quem já usou o <a href="https://www.djangoproject.com">django</a> alguma vez, já deve ter esbarrado com <a href="https://docs.djangoproject.com/en/1.9/ref/signals/">signals</a>.</p>
+<h4>Aplicação sem test não tem graça.</h4>
+<p>Uma das coisas que mais me auxiliam a criar aplicações, sem ter medo de errar, é sempre ter testes para
+garantir que minha aplicacação vai fazer exatamente aquilo para qual ela foi criada. Para minha stack de teste eu utilizei,
+<a href="https://www.npmjs.com/package/supertest">supertest</a>+<a href="https://www.npmjs.com/package/assert">assert</a>+<a href="https://www.npmjs.com/package/nock">nock</a>+<a href="https://github.com/mochajs/mocha">mocha</a>.</p>
+<div class="codehilite"><pre><span class="nx">describe</span><span class="p">(</span><span class="s2">&quot;SCRAP&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+    <span class="nx">before</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+        <span class="nx">Fii</span><span class="p">.</span><span class="nx">remove</span><span class="p">({},</span> <span class="kd">function</span><span class="p">(){});</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;should return {message:&#39;94 fii, foram copiados.&#39;}.&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+        <span class="nx">nock</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">).</span><span class="nx">once</span><span class="p">()</span>
+            <span class="p">.</span><span class="nx">reply</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="nx">requestBody</span><span class="p">,</span> <span class="nx">cb</span><span class="p">){</span>
+                <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="s2">&quot;/index.html&quot;</span><span class="p">)</span> <span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/api/scrap&quot;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span> <span class="nx">error</span> <span class="p">)</span> <span class="k">return</span> <span class="nx">done</span><span class="p">(</span><span class="nx">error</span><span class="p">);</span>
+
+                <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span> <span class="s2">&quot;94 fii, foram copiados.&quot;</span><span class="p">);</span>
+                <span class="nx">done</span><span class="p">();</span>
+            <span class="p">});</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;fii service return 404, scrap service should return message and status 503.&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+        <span class="nx">nock</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">).</span><span class="nx">once</span><span class="p">().</span><span class="nx">reply</span><span class="p">(</span><span class="mi">404</span><span class="p">,</span> <span class="s2">&quot;Fora&quot;</span><span class="p">);</span>
+        <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/api/scrap&quot;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="mi">503</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+                <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span> <span class="s2">&quot;Serviço indisponível.&quot;</span><span class="p">);</span>
+                <span class="nx">done</span><span class="p">();</span>
+            <span class="p">});</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s2">&quot;case html broken, scrap service should return status 503&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">done</span><span class="p">){</span>
+        <span class="nx">nock</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">endpoint</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">).</span><span class="nx">once</span><span class="p">()</span>
+            <span class="p">.</span><span class="nx">reply</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">uri</span><span class="p">,</span> <span class="nx">requestBody</span><span class="p">,</span> <span class="nx">cb</span><span class="p">){</span>
+                <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">__dirname</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="s2">&quot;/error.html&quot;</span><span class="p">)</span> <span class="p">,</span> <span class="nx">cb</span><span class="p">);</span>
+            <span class="p">});</span>
+        <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/api/scrap&quot;</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="mi">503</span><span class="p">)</span>
+            <span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">res</span><span class="p">){</span>
+                <span class="nx">assert</span><span class="p">.</span><span class="nx">equal</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span> <span class="s2">&quot;Serviço indisponível.&quot;</span><span class="p">);</span>
+                <span class="nx">done</span><span class="p">();</span>
+            <span class="p">});</span>
+    <span class="p">})</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<p>O <a href="https://www.npmjs.com/package/nock">nock</a> só é necessário se você precisa <a href="https://pt.wikipedia.org/wiki/Objeto_Mock">mockar</a> alguma resposta.
+Para testes que dependem de recursos externernos a sua aplicação, é interessante você <a href="https://pt.wikipedia.org/wiki/Objeto_Mock">mockar</a>, para performar o tempo de resposta do seus testes.
+Os testes foram escritos em <a href="https://pt.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a> utilizando o framework <a href="https://github.com/mochajs/mocha">mocha</a>, e para simular as chamadas ao serviço <a href="https://www.npmjs.com/package/supertest">supertest</a>. Para executar a stack de teste é bem simples.</p>
+<div class="codehilite"><pre>make <span class="nb">test</span>
+or
+npm <span class="nb">test</span>
+</pre></div>
+
+
+<h4>Desenvolvendo em ambientes seguros.</h4>
+<p>O último módulo é não menos importante que completou a minha stack, foi o <a href="https://www.npmjs.com/package/dotenv">dotenv</a>. Um site que eu indico para você ler, e ter uma melhor noção de boas práticas de software-as-a-service é <a href="http://12factor.net">The Twelve-Factor APP</a>. O tópico que ratifica
+o uso desse módulo é o <a href="http://12factor.net/config">III Config</a>. O <a href="https://www.npmjs.com/package/dotenv">dotenv</a> permite que você crie enviroments com as configurações que você precisa no seu ambiente local. Ele não é para ser utilizado em produção. Por default ele vai procurar na raiz
+do seu projeto a variável de ambiente <strong>.env</strong>, caso você queira usar outro nome, você precisa passar o <a href="https://www.npmjs.com/package/dotenv#path">path</a> para <a href="https://www.npmjs.com/package/dotenv">dotenv</a>, não é nenhum bicho de 7 cabeças.</p>
+<h4>Express em ação.</h4>
+<p>Criar uma aplicação com <a href="http://expressjs.com/">express</a> é bem simples, ele não foge muito do
+modelo que o <a href="http://flask.pocoo.org/">flask</a> nos da. Eu queria que o meu app, ficasse isolado
+do contexto geral, e que de certa forma eu pudesse desplugar ele rapidamente da minha app. Então
+eu usei a feature <em>express.Router()</em> para me permitir fazer isso.</p>
+<div class="codehilite"><pre><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;express&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./config&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;./models/api.js&quot;</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">exports</span><span class="p">.</span><span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">port</span> <span class="o">=</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="mi">5000</span><span class="p">;</span>
+<span class="nx">router</span> <span class="o">=</span> <span class="nx">express</span><span class="p">.</span><span class="nx">Router</span><span class="p">()</span>
+
+<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="nx">api</span><span class="p">.</span><span class="nx">list</span><span class="p">);</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s2">&quot;/scrap&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="nx">api</span><span class="p">.</span><span class="nx">scrap</span><span class="p">);</span>
+<span class="nx">router</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s2">&quot;/:codigo&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="nx">api</span><span class="p">.</span><span class="nx">filter</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="s1">&#39;json spaces&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="s2">&quot;/api&quot;</span><span class="p">,</span> <span class="nx">router</span><span class="p">);</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">){</span>
+    <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="nx">message</span><span class="o">:</span><span class="s2">&quot;Recupera informações sobre proventos dos fii&quot;</span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">);</span>
+</pre></div>
+
+
+<p>Para executar app, basta executar o commando abaixo.</p>
+<div class="codehilite"><pre>make run
+</pre></div>
+
+
+<h4>Conclusão.</h4>
+<p>Espero que tenha atendido as suas expectativas. Dúvidas ou sugestões é só comentar no post, que eu
+estou sempre a disposição para ajudar. Não fique acanhado em fazer um <a href="https://help.github.com/articles/fork-a-repo/">fork</a> e me mandar um <a href="https://help.github.com/articles/using-pull-requests/">pull request</a> com uma melhoria no app.</p>
       </article>
 
       <hr />
@@ -64,9 +238,9 @@ O primeiro livro que eu li na vida foi a <a href="https://www.bibliaonline.com.b
 
 
       <li>
-<a href="http://blog.henriquelopes.com.br/como-criar-uma-api-com-node-js-e-express.html" rel="bookmark" title="Permalink to Como criar uma api com nodejs e express">Como criar uma api com nodejs e express</a>
-  <time datetime="2016-01-24T09:11:00-02:00" pubdate>Sun 24 January 2016</time>
-<p class="tags">tags:   <a href="http://blog.henriquelopes.com.br/tag/nodejs.html">nodejs</a> , <a href="http://blog.henriquelopes.com.br/tag/express.html">express</a> , <a href="http://blog.henriquelopes.com.br/tag/api.html">api</a></p></a>      </li>
+<a href="http://blog.henriquelopes.com.br/a-leitura-e-meus-objetivos.html" rel="bookmark" title="Permalink to A leitura e meus objetivos">A leitura e meus objetivos</a>
+  <time datetime="2016-01-25T09:25:00-02:00" pubdate>Mon 25 January 2016</time>
+<p class="tags">tags:   <a href="http://blog.henriquelopes.com.br/tag/empreendedorismo.html">empreendedorismo</a> , <a href="http://blog.henriquelopes.com.br/tag/vida.html">vida</a></p></a>      </li>
 
 
       <li>

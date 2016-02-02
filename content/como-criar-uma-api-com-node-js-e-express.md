@@ -5,22 +5,15 @@ Category: Dev
 Slug: como-criar-uma-api-com-node-js-e-express
 Author: Henrique Lopes
 
-Eu sou uma pessoa que gosta de resolver problemas, não criar outros por causa de uma linguagem de
-programação. O [PO](http://www.desenvolvimentoagil.com.br/scrum/product_owner) na maioria das vezes não possui competências técnicas para distinguir qual seria a melhor
-linguagem ou arquitetura para o seu produto. Você que está entrando no mercado agora ou almeja entrar, deve ter esse tipo sabiencia. Você também é parte do processo, software é feito por pessoas,
-e são elas que tomam as decisões. Por que eu quis iniciar esse post com essa pequena explanação? Eu sou um pythonista de coração, e adoro usar, quando tenho a possibilidade de resolver os problemas
-pythonicamente, mais no meu dia a dia nem sempre o posso. Hoje na stack que temos no [hotelurbano](https://www.hotelurbano.com/),
-temos aplicações em [python](https://www.python.org), [nodejs](https://nodejs.org/en/), [scala](http://www.scala-lang.org/), [go](https://golang.org), [ruby](https://www.ruby-lang.org/pt/) e [php](https://secure.php.net/manual/pt_BR/index.php). As vezes é necessário desenvolver novas features nessas aplicações, para que elas possam se comunicar com outra aplicação.
+Eu sou uma pessoa que gosta de resolver problemas, não criar outros por causa de uma linguagem de programação. O [PO](http://www.desenvolvimentoagil.com.br/scrum/product_owner) na maioria das vezes não possui competências técnicas para distinguir qual seria a melhor linguagem ou arquitetura para o seu produto. Você que está entrando no mercado agora ou almeja entrar, deve ter esse tipo sapiência. Você também é parte do processo, software é feito por pessoas, e são elas que tomam as decisões. Por que eu quis iniciar esse post com essa pequena explanação? Eu sou um pythonista de coração, e adoro usar, quando tenho a possibilidade de resolver os problemas pythonicamente, mas no meu dia a dia, eu nem sempre o posso. Hoje na stack que temos no [hotelurbano](https://www.hotelurbano.com/), temos aplicações em [python](https://www.python.org), [nodejs](https://nodejs.org/en/), [scala](http://www.scala-lang.org/), [go](https://golang.org), [ruby](https://www.ruby-lang.org/pt/) e [php](https://secure.php.net/manual/pt_BR/index.php). As vezes é necessário desenvolver novas features nessas aplicações, para que elas possam se comunicar com outra aplicação.
 
 
 #### Vamos ao que realmente interessa #nodejs.
 
-Eu não tive muita dificuldade para entender [nodejs](https://nodejs.org/en/), eu já sabia javascript
-muito bem, foi fácil para dar meus primeiros passos. A unica coisa que me atrapalhou um pouco nesse
-projeto foi montar a minha stack, o [nodejs](https://nodejs.org/en/) possui várias implementações para o que eu estava querendo fazer. Mais conversando com amigos mais fluentes em [nodejs](https://nodejs.org/en/) eu cheguei ao meu produto, uma api para me informar o valor dos proventos pagos por cada [fundo imobiliário](http://www.fundoimobiliario.com.br/). Se quiser já ir dando uma olhada o [link](https://github.com/riquellopes/fii) é esse. Eu vou explicar todo o processo, pode deixar. Vou te dar tudo no esquema.
+Eu não tive muita dificuldade para entender [nodejs](https://nodejs.org/en/), eu já sabia javascript muito bem, então foi fácil para dar meus primeiros passos. A unica coisa que me atrapalhou um pouco nesse projeto foi montar a minha stack, o [nodejs](https://nodejs.org/en/) possui várias implementações para o que eu estava querendo fazer. Mas conversando com amigos mais fluentes em [nodejs](https://nodejs.org/en/) eu cheguei ao meu produto, uma api para me informar o valor dos proventos pagos por cada [fundo imobiliário](http://www.fundoimobiliario.com.br/). Se quiser já ir dando uma olhada o [link](https://github.com/riquellopes/fii) é esse. Eu vou explicar todo o processo, pode deixar. Vou te dar tudo no esquema.
 
 
-Eu tentei encontrar alguma api que podesse me fornecer a informação que eu queria, mas não achei nada que fosse de graça. Então acabei criando um [scraping](https://pt.wikipedia.org/wiki/Data_scraping), que raspa essa informação de um outro site. Em python isso é muito tranquilo de se fazer. Com [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) e [requests](http://docs.python-requests.org/en/latest/), eu teria isso de forma simples. No [nodejs](https://nodejs.org/en/) eu utilizei o [scrap](https://www.npmjs.com/package/scrap), li vários posts que mencionavam ele, então resolvi usar. Para quem já uso jquery, e sabe um pouco de [seletores](https://api.jquery.com/category/selectors/), não vai encontrar nenhuma dificuldade para utilizar.
+Eu tentei encontrar alguma api que podesse me fornecer a informação que eu queria, mas não achei nada que fosse de graça. Então acabei criando um [scraping](https://pt.wikipedia.org/wiki/Data_scraping), que raspa essa informação de um outro site. Em python isso é muito tranquilo de se fazer. Com [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/) e [requests](http://docs.python-requests.org/en/latest/), eu teria isso de forma simples. No [nodejs](https://nodejs.org/en/) eu utilizei o [scrap](https://www.npmjs.com/package/scrap), li vários posts que mencionavam ele, então resolvi usar. Para quem já usou jQuery, e sabe um pouco de [seletores](https://api.jquery.com/category/selectors/), não vai encontrar nenhuma dificuldade para utilizar.
 
 ```javascript
 exports.scrap = function(request, response){
@@ -67,13 +60,12 @@ exports.scrap = function(request, response){
     });
 }
 ```
-Para acelerar um pouco mais o processo, eu utilizei um queue do módulo, [async](https://github.com/caolan/async). Eu não tinha tanta necessidade de fazer isso, mais como era um protótipo, resovelvi adicionar essa fila, para que o meu processo fosse mais performático ainda. O módulo [async](https://github.com/caolan/async) possui várias features legais, da uma olhada depois na documentação do projeto.
+Para acelerar um pouco mais o processo, eu utilizei um queue do módulo, [async](https://github.com/caolan/async). Eu não tinha tanta necessidade de fazer isso, mais como era um protótipo, resolvi adicionar essa fila, para que o meu processo fosse mais performático ainda. O módulo [async](https://github.com/caolan/async) possui várias features legais, da uma olhada depois na documentação do projeto.
 
 #### Orm utilizado.
 
 Para persistir esses dados, que não possuem uma estrutura muito bem definida eu resolvi utilizar o [mongodb](https://www.mongodb.org/)+[mongolab](https://mongolab.com/)+[mongoose](http://mongoosejs.com/).
-Nas pesquisas que fiz o [mongoose](http://mongoosejs.com/) é muito difundido, então segui essa mesma linha. O [mongolab](https://mongolab.com/) é um MongoDB-as-a-Service que gosto muito, e como eu não queria pagar nada,
-para ter uma máquina com [mongodb](https://www.mongodb.org/), adicionei mais esse ingrediente a minha stack.
+Nas pesquisas que fiz o [mongoose](http://mongoosejs.com/) é muito difundido, então segui essa mesma linha. O [mongolab](https://mongolab.com/) é um MongoDB-as-a-Service que eu gosto muito, e como eu não queria pagar nada para ter uma máquina com [mongodb](https://www.mongodb.org/), adicionei mais esse ingrediente a minha stack.
 
 
 ```javascript
@@ -173,18 +165,16 @@ npm test
 
 #### Desenvolvendo em ambientes seguros.
 
-O último módulo é não menos importante que completou a minha stack, foi o [dotenv](https://www.npmjs.com/package/dotenv). Um site que eu indito para você ler, e ter uma melhor noção
-de boas práticas de software-as-a-service é [The Twelve-Factor APP](http://12factor.net). O tópico que ratifica
-o uso desse módulo é o [III Config](http://12factor.net/config). O [dotenv](https://www.npmjs.com/package/dotenv) permite que você crie enviroments com as configurações que você
-precisa no seu ambiente local. Ele não é para ser utilizado em produção. Por default ele vai procurar na raiz
-do seu projeto a variável de ambiente **.env**, caso você queira usar outro nome, você precisa passar o [path](https://www.npmjs.com/package/dotenv#path) para [dotenv](https://www.npmjs.com/package/dotenv), não é nenhum bixo de 7 cabeças.
+O último módulo é não menos importante que completou a minha stack, foi o [dotenv](https://www.npmjs.com/package/dotenv). Um site que eu indico para você ler, e ter uma melhor noção de boas práticas de software-as-a-service é [The Twelve-Factor APP](http://12factor.net). O tópico que ratifica
+o uso desse módulo é o [III Config](http://12factor.net/config). O [dotenv](https://www.npmjs.com/package/dotenv) permite que você crie enviroments com as configurações que você precisa no seu ambiente local. Ele não é para ser utilizado em produção. Por default ele vai procurar na raiz
+do seu projeto a variável de ambiente **.env**, caso você queira usar outro nome, você precisa passar o [path](https://www.npmjs.com/package/dotenv#path) para [dotenv](https://www.npmjs.com/package/dotenv), não é nenhum bicho de 7 cabeças.
 
 
 #### Express em ação.
 
 Criar uma aplicação com [express](http://expressjs.com/) é bem simples, ele não foge muito do
-modelo que o [flask](http://flask.pocoo.org/) nos da. Eu queria que o meu app, fica-se isolado
-do contexto geral, e que de certa forma eu despluga-se ele rapidamente da minha app,
+modelo que o [flask](http://flask.pocoo.org/) nos da. Eu queria que o meu app, ficasse isolado
+do contexto geral, e que de certa forma eu pudesse desplugar ele rapidamente da minha app. Então
 eu usei a feature *express.Router()* para me permitir fazer isso.
 
 ```javascript
@@ -218,6 +208,5 @@ make run
 
 #### Conclusão.
 
-Espero que tenha atendido as suas expectativas. Duvidas ou sugestões é só comentar no post, que eu
-estou sempre a disposição para ajudar. Não fique acanhado em fazer um [fork](https://help.github.com/articles/fork-a-repo/) e me mandar um [pull request](https://help.github.com/articles/using-pull-requests/)
-com uma melhoria no app.
+Espero que tenha atendido as suas expectativas. Dúvidas ou sugestões é só comentar no post, que eu
+estou sempre a disposição para ajudar. Não fique acanhado em fazer um [fork](https://help.github.com/articles/fork-a-repo/) e me mandar um [pull request](https://help.github.com/articles/using-pull-requests/) com uma melhoria no app.

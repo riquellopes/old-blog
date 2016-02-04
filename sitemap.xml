@@ -5,30 +5,37 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.henriquelopes.com.br/</loc>
-<lastmod>2016-02-04T01:33:42-00:00</lastmod>
+<lastmod>2016-02-04T23:30:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.henriquelopes.com.br/archives.html</loc>
-<lastmod>2016-02-04T01:33:42-00:00</lastmod>
+<lastmod>2016-02-04T23:30:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.henriquelopes.com.br/tags.html</loc>
-<lastmod>2016-02-04T01:33:42-00:00</lastmod>
+<lastmod>2016-02-04T23:30:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://blog.henriquelopes.com.br/categories.html</loc>
-<lastmod>2016-02-04T01:33:42-00:00</lastmod>
+<lastmod>2016-02-04T23:30:35-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.henriquelopes.com.br/criar-um-negocio-nem-sempre-e-reinventar-a-roda.html</loc>
+<lastmod>2016-02-04T21:24:00-02:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
 </url>
 
 <url>
@@ -83,6 +90,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.henriquelopes.com.br/category/dev.html</loc>
 <lastmod>2016-02-02T08:28:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.henriquelopes.com.br/category/empreendedorismo.html</loc>
+<lastmod>2016-02-04T21:24:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -159,7 +173,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.henriquelopes.com.br/tag/empreendedorismo.html</loc>
-<lastmod>2016-01-25T09:25:00-03:06</lastmod>
+<lastmod>2016-02-04T21:24:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -167,6 +181,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://blog.henriquelopes.com.br/tag/deploy.html</loc>
 <lastmod>2016-01-17T17:48:00-03:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://blog.henriquelopes.com.br/tag/negocios.html</loc>
+<lastmod>2016-02-04T21:24:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -187,7 +208,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://blog.henriquelopes.com.br/author/henrique-lopes.html</loc>
-<lastmod>2016-02-02T08:28:00-03:06</lastmod>
+<lastmod>2016-02-04T21:24:00-03:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

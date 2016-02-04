@@ -1,17 +1,11 @@
 {% extends "base.html" %}
-{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
 
 {% block extra_meta %}
-
 	<meta name="description" content="{{ article.summary|striptags }}">
-
-{% if PELICAN_SIMPLEGREY_TWITTER_CARD_ACCOUNT %}
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:creator" content="@{{ PELICAN_SIMPLEGREY_TWITTER_CARD_ACCOUNT }}">
-	<meta name="twitter:title" content="{{ article.title }}">
-	<meta name="twitter:description" content="{{ article.summary|striptags }}">
-	<meta name="twitter:url" content="{{ SITEURL }}/{{ article.url }}">
-{% endif %}
+	<meta name="og:description" content="{{ article.summary|striptags }}">
+	<meta property="og:title" content="{{ SITENAME }} - {{ article.title }}" />
+  	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
 {% endblock %}
 
 

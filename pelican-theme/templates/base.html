@@ -1,12 +1,19 @@
 <!doctype html>
-<html lang="{{ HTML_LANG }}">
+<html lang="{{ HTML_LANG }}" prefix="og: http://ogp.me/ns#">
 <head>
 	<meta charset="utf-8"/>
 	<title>{% block title %}{{ SITENAME }}{%endblock%}</title>
 	<meta name="author" content="{{ AUTHOR }}">
-
+	<meta name="robots" content="index,follow">
 	{% block extra_meta %}
+	<meta name="description" content="Tecnologia, Empreendedorismo &amp; LifeStyle">
+	<meta name="og:description" content="Tecnologia, Empreendedorismo &amp; LifeStyle">
+	<meta property="og:title" content="{{ SITENAME }}" />
+	<meta property="og:url" content="{{ SITEURL }}">
 	{% endblock %}
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="{{ SITENAME }}"/>
+	<meta property="og:locale" content="{{ HTML_LANG }}"/>
 
 	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
 	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />

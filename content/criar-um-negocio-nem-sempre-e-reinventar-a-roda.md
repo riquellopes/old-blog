@@ -1,5 +1,5 @@
 Title: Criar um negócio nem sempre é reinventar a roda
-Date: 2016-01-30 21:08
+Date: 2016-02-04 21:24
 Tags: empreendedorismo, negócios
 Category: Empreendedorismo
 Slug: criar-um-negocio-nem-sempre-e-reinventar-a-roda

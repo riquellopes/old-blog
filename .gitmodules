@@ -8,5 +8,5 @@
 	branch = master
 [submodule "custom-plugins"]
 	path = custom-plugins
-	url = git@github.com:riquellopes/pelican-adsense.git
+	url = https://github.com/riquellopes/pelican-adsense.git
 	branch = master

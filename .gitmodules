@@ -2,7 +2,6 @@
 	path = pelican-plugins
 	url = https://github.com/getpelican/pelican-plugins.git
 	branch = master
-
 [submodule "pelican-theme"]
 	path = pelican-theme
 	url = https://github.com/fle/pelican-simplegrey.git
@@ -10,3 +9,4 @@
 [submodule "custom-plugins"]
 	path = custom-plugins
 	url = git@github.com:riquellopes/pelican-adsense.git
+	branch = master

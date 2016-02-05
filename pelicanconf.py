@@ -48,9 +48,10 @@ EXTRA_PATH_METADATA = {
 # Plugins
 PLUGIN_PATHS = [
     'pelican-plugins',
+    'custom-plugins'
 ]
 
-PLUGINS = ["sitemap"]
+PLUGINS = ["sitemap", "custom-plugins"]
 SITEMAP = {
     'format': 'xml',
     'priorities': {

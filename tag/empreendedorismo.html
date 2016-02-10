@@ -38,6 +38,11 @@
     <div class="container">
 
 	  <header role="banner">
+		<div id="hamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 	    <div class="feeds">
 	        <a href="http://blog.henriquelopes.com.br/feeds/all.atom.xml" rel="alternate"><img src="http://blog.henriquelopes.com.br/theme/images/icons/feed-32px.png" alt="atom feed"/></a>
 	    </div>
@@ -150,6 +155,37 @@ dar uma nova perspectiva de algum produto que ...</p></p>
 
 	<script>
 		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+
+	<script>
+		(function() {
+			function addEventsCrossBrowsers (elem, event, callBack) {
+				if (elem.addEventListener) {
+					elem.addEventListener(event, callBack, false);
+				} else if (elem.attachEvent) {
+					elem.attachEvent("on" + event, callBack);
+				}
+			};
+
+			function toogleClass(ele, class1) {
+			var classes = ele.className;
+
+			var regex = new RegExp('\\b' + class1 + '\\b');
+			var hasOne = classes.match(regex);
+			class1 = class1.replace(/\s+/g, '');
+			if (hasOne)
+				ele.className = classes.replace(regex, '');
+			else
+				ele.className = classes + " " +class1;
+			}
+
+			var el = document.getElementById('hamburger');
+			addEventsCrossBrowsers(el, "click", function() {
+				var elem = document.getElementsByClassName('sidebar')[0];
+				toogleClass(elem, 'show');
+				toogleClass(el, 'close');
+			});
+		})();
 	</script>
 
 	  <script>

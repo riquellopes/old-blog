@@ -7,3 +7,4 @@ as coisas funcionam. Fique avontade, pode fazer um fork do projeto e criar o seu
 que você acredita que pode ser feito de uma formar melhor, pode fazer um pull request para mim. Não fique acanhado.
 
 [![Build Status](https://travis-ci.org/riquellopes/riquellopes.github.io.svg?branch=master)](https://travis-ci.org/riquellopes/riquellopes.github.io)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/riquellopes/riquellopes.github.io/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

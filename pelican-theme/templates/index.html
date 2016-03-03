@@ -1,36 +1,49 @@
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
+{% block content %}        
+{% if articles %}
+    {% for article in articles_page.object_list %}        
 
-{% block content %}
+        {# First item #}
+        {% if loop.first and not articles_page.has_previous() %}
+            <article>
+                <a href="{{ SITEURL }}/{{ article.url }}"><h3 class="article-title">{{ article.title }}</h3></a>
+                {% include 'article_infos.html' %}{{ article.content }}{% include 'article_infos_bottom.html' %}{% include 'comments.html' %}
+            </article>
 
-{% for article in articles %}
+            {% if loop.length == 1 %}
+                {% include 'pagination.html' %}
+            {% endif %}
 
-    {% if loop.index == 1 %}
+            {% if loop.length > 1 %}
+                <hr  class="gradient"/>
+            {% endif %}
 
-      <article>
-        <h1><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h1>
-        {{ article.content }}
-      </article>
+        {# other items #}
+        {% else %}
 
-      <hr />
+            <article>
+                <a href="{{ SITEURL }}/{{ article.url }}"><h3 class="article-title">{{ article.title }}</h3></a>
+                {% include 'article_infos.html' %}{{ article.summary }}{% include 'article_infos_bottom.html' %}{% include 'comments.html' %}
+                <a class="button radius secondary small right" href="{{ SITEURL }}/{{ article.url }}">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        {% endif %}
 
-      {% if loop.length  > 1 %}
-        <div>
-          <h3>Last posts</h3>
-          <ol class="archive">
-      {% endif %}
-    
-    {% elif loop.index < 7 %}
-      <li>
-        {% include 'article_link.inc.html' %}
-      </li>
-    {% endif %}
+        {% if loop.last %}
+            <!-- /#posts-list -->
+            {% if loop.last and (articles_page.has_previous() or not articles_page.has_previous() and loop.length > 1) %}
+                {% include 'pagination.html' %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
 
-{% endfor %}
+{% else %}
 
-{% if articles|length > 1 %}
-          </ol>
-        </div>
+    <h3>Pages</h3>
+    {% for page in PAGES %}
+        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+    {% endfor %}
+
 {% endif %}
-
 {% endblock content %}

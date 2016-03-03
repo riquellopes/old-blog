@@ -1,18 +1,13 @@
-# simplegrey #
+TuxLite ZF Theme
+================
 
+A mobile first theme that leverages the Zurb Foundation v4 framework. Minimalist two column, 
+right sidebar design. Sidebar goes below main content when viewed on mobile devices.
 
+Customization is all done and documented in style.css.
 
-## Screenshot ##
+Menu items and pages can be added to the top navigation bar via pelican settings file.
 
-![screenshot](screenshot.png)
+Screenshot below.
 
-
-## Options ##
-
-``PELICAN_SIMPLEGREY_TWITTER_CARD_ACCOUNT = '__fle__' `` option allows you add [Twitter summary card metadata](https://dev.twitter.com/docs/cards/types/summary-card) in your posts 
-
-## Credits ##
-
-* Theme freely inspired by [vkvn](https://github.com/vkvn)
-* Icons by [Jorge Calvo](http://dribbble.com/shots/1074961-Flat-Icons-EPS), slightly adapted by [Ingrid Hamard](http://ingrid.hamard.free.fr)
-
+![Screenshot](Screenshot.png)

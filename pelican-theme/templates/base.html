@@ -1,33 +1,31 @@
-<!doctype html>
-<html lang="{{ HTML_LANG }}" prefix="og: http://ogp.me/ns#">
+<!DOCTYPE html>
 <head>
-	<meta charset="utf-8"/>
-	<title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-	<meta name="author" content="{{ AUTHOR }}">
-	<meta name="robots" content="index,follow">
-	{% block extra_meta %}
-	<meta name="description" content="Tecnologia, Empreendedorismo &amp; LifeStyle">
-	<meta name="og:description" content="Tecnologia, Empreendedorismo &amp; LifeStyle">
-	<meta property="og:title" content="{{ SITENAME }}" />
-	<meta property="og:url" content="{{ SITEURL }}">
-	{% endblock %}
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="{{ SITENAME }}"/>
-	<meta property="og:locale" content="{{ HTML_LANG }}"/>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
 
-	<link rel="top" href="#" /><link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro' rel='stylesheet' type='text/css'></link>
-	<link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
 
-	{% block scripts %}
-	{% endblock %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/pygments.css" />
+    <script src="{{ SITEURL }}/theme/js/custom.modernizr.js"></script>
 
+    <!-- So Firefox can bookmark->"abo this site" -->
     {% if FEED_ALL_ATOM %}
-    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+        <link href="{{ FEED_ALL_ATOM }}" rel="alternate" title="{{ SITENAME }}" type="application/atom+xml">
+    {% endif %}
+    {% if FEED_ATOM %}
+        <link href="{{ FEED_ATOM }}" rel="alternate" title="{{ SITENAME }}" type="application/atom+xml">
+    {% endif %}
+    {% if FEED_RSS %}
+        <link href="{{ FEED_RSS }}" rel="alternate" title="{{ SITENAME }}" type="application/rss+xml">
     {% endif %}
     {% if FEED_ALL_RSS %}
-    <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        <link href="{{ FEED_ALL_RSS }}" rel="alternate" title="{{ SITENAME }}" type="application/rss+xml">
     {% endif %}
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='b16f727c276b6c965ed2adcc0723a851' data-cfasync='false' async='async'></script>
 	<!-- Hotjar Tracking Code for http://blog.henriquelopes.com.br -->
 	<script>
@@ -43,135 +41,119 @@
 </head>
 
 <body>
-{{ FEED_ATOM }}
-    <div class="container">
 
-	  <header role="banner">
-		<div id="hamburger">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	    <div class="feeds">
-	      {% if FEED_ALL_ATOM %}
-	        <a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" rel="alternate"><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icons/feed-32px.png" alt="atom feed"/></a>
-	      {% endif %}
-          {% if FEED_ALL_RSS %}
-            <a href="{{ SITEURL }}/{{ FEED_ALL_RSS }}" rel="alternate"><img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/images/icons/feed-32px.png" alt="rss feed"/></a>
-          {% endif %}
-	    </div>
-	    {% if PAGES %}
-	      <nav class="pages">
-	        {% for p in PAGES %}
-			  <a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-			  {% if not loop.last %}-{% endif %}
-			{% endfor %}
-	      </nav>
-	    {% endif %}
-		<a href="{{ SITEURL }}" class="title">{{ SITENAME }}</a>
-      </header>
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+    </div>
+</div>
+</div>
 
-	  <div class="wrapper">
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+	{% for title, link in MENUITEMS %}
+    <li><a href="{{ link }}" class="button secondary small">{{ title }}</a></li>
+    {% endfor %}
 
-		  <div role="main" class="content">
-			<br />
-			<!-- top-blog-cabecalho -->
+    {% if DISPLAY_PAGES_ON_MENU %}
+        {% for page in PAGES %}
+            <li><a href="{{ SITEURL }}/{{ page.url }}" class="button secondary small">{{ page.title }}</a></li>
+        {% endfor %}
+    {% endif %}
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        <!-- top-blog-cabecalho -->
 			<ins class="adsbygoogle"
 			     style="display:inline-block;width:728px;height:90px"
 			     data-ad-client="ca-pub-9390117676358866"
 			     data-ad-slot="9305902839"></ins>
-			{% block content %}{% endblock %}
-		  </div>
+    {% block content %}{% endblock %}
+    </div>
+    <!-- End Main Content -->
 
-		  <div class="sidebar">
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="{{ SITEURL }}/archives.html">Archives</a>
+            <li><a href="{{ SITEURL }}/tags.html">Tags</a>
 
-	        <nav>
-	          <h2>Categories</h2>
-	          <ul>
-	            {% for cat, null in categories %}
-	              <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
-	            {% endfor %}
-	          </ul>
-	        </nav>
 
-	        {% if SOCIAL %}
-	          <aside>
-	          <h2>Social</h2>
-			    <ul class="social">
-				  {% for name, link in SOCIAL %}
-				  <li><a href="{{ link }}">{{ name }}</a><i></i></li>
-				  {% endfor %}
-			    </ul>
-			  </aside>
-			{% endif %}
+                {% if FEED_ALL_ATOM %}
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" rel="alternate">Atom feed</a></li>
+                {% endif %}
+                {% if FEED_ATOM %}
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ATOM }}" rel="alternate">Atom feed</a></li>
+                {% endif %}
+                {% if FEED_RSS %}
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_RSS }}" rel="alternate">RSS feed</a></li>
+                {% endif %}
+                {% if FEED_ALL_RSS %}
+                <li><a href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" rel="alternate">RSS feed</a></li>
+                {% endif %}
+        </ul>
 
-	        {% if LINKS %}
-	          <aside>
-	            <h2>Blogroll</h2>
-	            <ul>
-	              {% for name, link in LINKS %}
-	                <li><a href="{{ link }}">{{ name }}</a></li>
-	              {% endfor %}
-	            </ul>
-	          </aside>
-	        {% endif %}
+        {% if categories %}
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+        {% for cat, null in categories %}
+            <li><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li>
+        {% endfor %}
+        </ul>
+        {% endif %}
 
-		  </div>
+        {% if LINKS %}
+        <h5 class="sidebar-title">Links</h5>
+        <ul class="side-nav">
+        {% for name, link in LINKS %}
+            <li><a href="{{ link }}">{{ name }}</a></li>
+        {% endfor %}
+        </ul>
+        {% endif %}
 
-	  </div>
+        {% if SOCIAL %}
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+        {% for name, link in SOCIAL %}
+            <li><a href="{{ link }}">{{ name }}</a></li>
+        {% endfor %}
+        </ul>
+        {% endif %}
 
-      <footer>
-		<p role="contentinfo">
-		  © 2016 {{ AUTHOR }} - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-simplegrey">pelican-simplegrey</a>.
-    	</p>
+    </aside> <!-- End Sidebar -->
 
-	  </footer>
+</div> <!-- End Main Content and Sidebar -->
 
-	</div>
 
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-
-	<script>
-		(function() {
-			function addEventsCrossBrowsers (elem, event, callBack) {
-				if (elem.addEventListener) {
-					elem.addEventListener(event, callBack, false);
-				} else if (elem.attachEvent) {
-					elem.attachEvent("on" + event, callBack);
-				}
-			};
-
-			function toogleClass(ele, class1) {
-			var classes = ele.className;
-
-			var regex = new RegExp('\\b' + class1 + '\\b');
-			var hasOne = classes.match(regex);
-			class1 = class1.replace(/\s+/g, '');
-			if (hasOne)
-				ele.className = classes.replace(regex, '');
-			else
-				ele.className = classes + " " +class1;
-			}
-
-			var el = document.getElementById('hamburger');
-			addEventsCrossBrowsers(el, "click", function() {
-				var elem = document.getElementsByClassName('sidebar')[0];
-				toogleClass(elem, 'show');
-				toogleClass(el, 'close');
-			});
-		})();
-	</script>
-
-	{% if GOOGLE_ANALYTICS %}
-	  <script>
-		var _gaq=[['_setAccount','{{ GOOGLE_ANALYTICS }}'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-	  </script>
-    {% endif %}
-	<script src="//s3.amazonaws.com/mailmunch/static/site.js" id="mailmunch-script" data-mailmunch-site-id="181537" async="async"></script>
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+                <p>© 2016 {{ AUTHOR }} - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/getpelican/pelican-themes/tree/master/tuxlite_zf">TuxLite ZF Theme</a>.</p>
+            </div>
+            </div>
+    </div>
+{% include "analytics.html" %}
+<script>
+	(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</footer>
 </body>
 </html>

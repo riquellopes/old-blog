@@ -31,7 +31,8 @@ SOCIAL = (('github', 'http://github.com/riquellopes'),
           ('twitter', 'https://twitter.com/riquellopes'),
           ('delicious', 'https://delicious.com/riquellopes'),)
 
-DEFAULT_PAGINATION = 3
+DEFAULT_PAGINATION = 5
+TWITTER_USERNAME = "riquellopes"
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True

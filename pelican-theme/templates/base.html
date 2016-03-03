@@ -5,7 +5,17 @@
     <meta name="viewport" content="width=device-width" />
 
     <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
-
+    <meta name="author" content="{{ AUTHOR }}">
+    <meta name="robots" content="index,follow">
+    {% block extra_meta %}
+    <meta name="description" content="Tecnologia, Empreendedorismo &amp; LifeStyle">
+    <meta name="og:description" content="Tecnologia, Empreendedorismo &amp; LifeStyle">
+    <meta property="og:title" content="{{ SITENAME }}" />
+    <meta property="og:url" content="{{ SITEURL }}">
+    {% endblock %}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ SITENAME }}"/>
+    <meta property="og:locale" content="{{ HTML_LANG }}"/>
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation.min.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css" />

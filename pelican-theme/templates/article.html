@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 {% block title %}{{ article.title|striptags }}{% endblock %}
+{% block extra_meta %}
+<meta name="description" content="{{ article.summary|striptags }}">
+<meta name="og:description" content="{{ article.summary|striptags }}">
+<meta property="og:title" content="{{ SITENAME }} - {{ article.title }}" />
+<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+{% endblock %}
+
 {% block content %}
 <article>
     <header>
